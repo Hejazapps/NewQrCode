@@ -34,7 +34,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDc-w1-XOe">
-                                        <rect key="frame" x="20.333333333333371" y="13.999999999999998" width="26.666666666666671" height="20.333333333333329"/>
+                                        <rect key="frame" x="20.333333333333314" y="13.999999999999998" width="26.666666666666671" height="20.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="Yjc-IA-RAD"/>
                                         </constraints>
@@ -158,16 +158,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFL-I3-dYQ">
-                                <rect key="frame" x="20" y="264" width="353" height="250"/>
+                                <rect key="frame" x="19.666666666666657" y="264" width="353.33333333333337" height="250"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jqb-xX-Crt">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="250"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353.33333333333331" height="250"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfQ-WZ-Yip">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="125"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="353.33333333333331" height="125"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Uua-Bo-MbA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="125"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="353.33333333333331" height="125"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWs-kl-lYn">
                                                                 <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="125"/>
@@ -176,7 +176,7 @@
                                                                         <rect key="frame" x="5" y="0.0" width="78.333333333333329" height="78.333333333333329"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="papa" translatesAutoresizingMaskIntoConstraints="NO" id="FCl-zv-HfN">
-                                                                                <rect key="frame" x="24" y="24" width="30" height="30"/>
+                                                                                <rect key="frame" x="24.333333333333329" y="24.333333333333314" width="30" height="30"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" secondItem="FCl-zv-HfN" secondAttribute="height" multiplier="1:1" id="43U-pp-fXl"/>
                                                                                     <constraint firstAttribute="width" constant="30" id="ICD-CK-Da1"/>
@@ -196,7 +196,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Template" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uy3-7T-HQk">
-                                                                        <rect key="frame" x="16.666666666666664" y="83.333333333333314" width="54.999999999999993" height="26.333333333333329"/>
+                                                                        <rect key="frame" x="16.666666666666671" y="83.333333333333314" width="55" height="26.333333333333329"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -219,7 +219,7 @@
                                                                         <rect key="frame" x="5" y="0.0" width="78.333333333333329" height="78.333333333333329"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Batch Scan" translatesAutoresizingMaskIntoConstraints="NO" id="pqv-X5-FGh">
-                                                                                <rect key="frame" x="24.000000000000014" y="24" width="30" height="30"/>
+                                                                                <rect key="frame" x="24.333333333333343" y="24.333333333333314" width="30" height="30"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" secondItem="pqv-X5-FGh" secondAttribute="height" multiplier="1:1" id="GAh-03-hlL"/>
                                                                                 </constraints>
@@ -238,7 +238,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batch Scan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tae-E2-JBe">
-                                                                        <rect key="frame" x="16.666666666666668" y="83.333333333333314" width="54.666666666666657" height="26.333333333333329"/>
+                                                                        <rect key="frame" x="16.666666666666671" y="83.333333333333314" width="55" height="26.333333333333329"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -252,13 +252,13 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBW-LE-mcz">
-                                                                <rect key="frame" x="176.66666666666666" y="0.0" width="87.999999999999972" height="125"/>
+                                                                <rect key="frame" x="176.66666666666669" y="0.0" width="88.333333333333314" height="125"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RjW-lb-UnN" customClass="CustomView" customModule="NewQrMaker" customModuleProvider="target">
-                                                                        <rect key="frame" x="5" y="0.0" width="78" height="78.333333333333329"/>
+                                                                        <rect key="frame" x="5" y="0.0" width="78.333333333333329" height="78.333333333333329"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Create Gif" translatesAutoresizingMaskIntoConstraints="NO" id="aJc-AR-caQ">
-                                                                                <rect key="frame" x="24" y="24" width="30" height="30"/>
+                                                                                <rect key="frame" x="24.333333333333314" y="24.333333333333314" width="30" height="30"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" secondItem="aJc-AR-caQ" secondAttribute="height" multiplier="1:1" id="ovB-CC-hsH"/>
                                                                                 </constraints>
@@ -277,7 +277,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Gif" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBJ-M6-0Qf">
-                                                                        <rect key="frame" x="16.666666666666682" y="83.333333333333314" width="54.666666666666657" height="26.333333333333329"/>
+                                                                        <rect key="frame" x="16.666666666666657" y="83.333333333333314" width="55" height="26.333333333333329"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -291,13 +291,13 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWE-pC-of1">
-                                                                <rect key="frame" x="264.66666666666669" y="0.0" width="88.333333333333314" height="125"/>
+                                                                <rect key="frame" x="265" y="0.0" width="88.333333333333314" height="125"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZu-0I-2H7" customClass="CustomView" customModule="NewQrMaker" customModuleProvider="target">
                                                                         <rect key="frame" x="5" y="0.0" width="78.333333333333329" height="78.333333333333329"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Collapse More" translatesAutoresizingMaskIntoConstraints="NO" id="WFJ-oq-x8f">
-                                                                                <rect key="frame" x="24.333333333333314" y="24" width="30" height="30"/>
+                                                                                <rect key="frame" x="24.333333333333314" y="24.333333333333314" width="30" height="30"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" secondItem="WFJ-oq-x8f" secondAttribute="height" multiplier="1:1" id="iX7-w4-XXq"/>
                                                                                 </constraints>
@@ -357,10 +357,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Fu-KI-dL6">
-                                                <rect key="frame" x="0.0" y="125" width="353" height="125"/>
+                                                <rect key="frame" x="0.0" y="125" width="353.33333333333331" height="125"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="q1B-Vn-Pwc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="125"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="353.33333333333331" height="125"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMS-qr-i5H">
                                                                 <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="125"/>
@@ -369,7 +369,7 @@
                                                                         <rect key="frame" x="5" y="0.0" width="78.333333333333329" height="78.333333333333329"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Create Vcard" translatesAutoresizingMaskIntoConstraints="NO" id="p9f-nR-0BD">
-                                                                                <rect key="frame" x="24" y="24" width="30" height="30"/>
+                                                                                <rect key="frame" x="24.333333333333329" y="24.333333333333314" width="30" height="30"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" secondItem="p9f-nR-0BD" secondAttribute="height" multiplier="1:1" id="etx-Eu-D6O"/>
                                                                                 </constraints>
@@ -388,7 +388,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Vcard" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svZ-dc-6iY">
-                                                                        <rect key="frame" x="16.666666666666664" y="83.333333333333314" width="54.999999999999993" height="26.333333333333329"/>
+                                                                        <rect key="frame" x="16.666666666666671" y="83.333333333333314" width="55" height="26.333333333333329"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -411,7 +411,7 @@
                                                                         <rect key="frame" x="5" y="0.0" width="78.333333333333329" height="78.333333333333329"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Decorate QR Code" translatesAutoresizingMaskIntoConstraints="NO" id="4UY-Kw-5hU">
-                                                                                <rect key="frame" x="24.000000000000014" y="24" width="30" height="30"/>
+                                                                                <rect key="frame" x="24.333333333333343" y="24.333333333333314" width="30" height="30"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" secondItem="4UY-Kw-5hU" secondAttribute="height" multiplier="1:1" id="zZR-Wp-Wn1"/>
                                                                                 </constraints>
@@ -430,7 +430,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvd-Pj-auy">
-                                                                        <rect key="frame" x="16.666666666666668" y="83.333333333333314" width="54.666666666666657" height="26.333333333333329"/>
+                                                                        <rect key="frame" x="16.666666666666671" y="83.333333333333314" width="55" height="26.333333333333329"/>
                                                                         <string key="text">Decorate
 QR Code</string>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
@@ -446,13 +446,13 @@ QR Code</string>
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OfB-ZS-YT2">
-                                                                <rect key="frame" x="176.66666666666666" y="0.0" width="87.999999999999972" height="125"/>
+                                                                <rect key="frame" x="176.66666666666669" y="0.0" width="88.333333333333314" height="125"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VpR-cV-8Mb" customClass="CustomView" customModule="NewQrMaker" customModuleProvider="target">
-                                                                        <rect key="frame" x="5" y="0.0" width="78" height="78.333333333333329"/>
+                                                                        <rect key="frame" x="5" y="0.0" width="78.333333333333329" height="78.333333333333329"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Create AI QR" translatesAutoresizingMaskIntoConstraints="NO" id="nZt-2Z-TC6">
-                                                                                <rect key="frame" x="24" y="24" width="30" height="30"/>
+                                                                                <rect key="frame" x="24.333333333333314" y="24.333333333333314" width="30" height="30"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" secondItem="nZt-2Z-TC6" secondAttribute="height" multiplier="1:1" id="hSL-rk-Vq5"/>
                                                                                 </constraints>
@@ -471,7 +471,7 @@ QR Code</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create AI QR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJz-jp-p8F">
-                                                                        <rect key="frame" x="16.666666666666682" y="83.333333333333314" width="54.666666666666657" height="26.333333333333329"/>
+                                                                        <rect key="frame" x="16.666666666666657" y="83.333333333333314" width="55" height="26.333333333333329"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -485,13 +485,13 @@ QR Code</string>
                                                                 </constraints>
                                                             </view>
                                                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqm-lL-6fi">
-                                                                <rect key="frame" x="264.66666666666669" y="0.0" width="88.333333333333314" height="125"/>
+                                                                <rect key="frame" x="265" y="0.0" width="88.333333333333314" height="125"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eu2-4a-Lhj" customClass="CustomView" customModule="NewQrMaker" customModuleProvider="target">
                                                                         <rect key="frame" x="5" y="0.0" width="78.333333333333329" height="78.333333333333329"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Collapse More" translatesAutoresizingMaskIntoConstraints="NO" id="Zqu-E1-BTt">
-                                                                                <rect key="frame" x="29.333333333333314" y="29" width="20" height="20"/>
+                                                                                <rect key="frame" x="29.333333333333314" y="29.333333333333314" width="20" height="20"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="20" id="FLR-5P-tuq"/>
                                                                                     <constraint firstAttribute="width" secondItem="Zqu-E1-BTt" secondAttribute="height" multiplier="1:1" id="eVi-Jc-f0C"/>
@@ -511,7 +511,7 @@ QR Code</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collapse More" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W83-ro-tW1">
-                                                                        <rect key="frame" x="16.666666666666629" y="84.333333333333314" width="55" height="24"/>
+                                                                        <rect key="frame" x="16.666666666666629" y="84.666666666666686" width="55" height="24"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -566,7 +566,7 @@ QR Code</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2F-vb-tIw">
-                                <rect key="frame" x="20" y="514" width="353" height="221"/>
+                                <rect key="frame" x="19.666666666666657" y="514" width="353.33333333333337" height="221"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -581,7 +581,6 @@ QR Code</string>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CFC-9a-awh" secondAttribute="trailing" constant="20" id="ICX-S5-o0i"/>
                             <constraint firstItem="H2F-vb-tIw" firstAttribute="trailing" secondItem="SFL-I3-dYQ" secondAttribute="trailing" id="RgQ-7D-wl9"/>
                             <constraint firstItem="CFC-9a-awh" firstAttribute="centerY" secondItem="OvR-8J-A3y" secondAttribute="centerY" id="UEk-yJ-MVF"/>
-                            <constraint firstItem="SFL-I3-dYQ" firstAttribute="leading" secondItem="dm4-W7-q6k" secondAttribute="leading" id="cAO-hE-nvd"/>
                             <constraint firstItem="dm4-W7-q6k" firstAttribute="trailing" secondItem="CFC-9a-awh" secondAttribute="trailing" id="etx-G2-K2I"/>
                             <constraint firstItem="OvR-8J-A3y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="klm-CQ-wZe"/>
                             <constraint firstItem="OvR-8J-A3y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="90" id="oCk-hL-Hde"/>
