@@ -157,21 +157,57 @@
                                     <constraint firstItem="Hy5-3Q-42x" firstAttribute="top" secondItem="dm4-W7-q6k" secondAttribute="top" id="tMr-qs-UJN"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFL-I3-dYQ">
+                                <rect key="frame" x="20" y="254" width="353" height="200"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oQm-2H-Oyh">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="200"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SFi-sL-DU2">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="oQm-2H-Oyh" secondAttribute="bottom" id="Gvo-hA-Dxs"/>
+                                    <constraint firstAttribute="height" constant="200" id="fq8-ce-SEe"/>
+                                    <constraint firstAttribute="trailing" secondItem="oQm-2H-Oyh" secondAttribute="trailing" id="nPa-lL-XvL"/>
+                                    <constraint firstItem="oQm-2H-Oyh" firstAttribute="leading" secondItem="SFL-I3-dYQ" secondAttribute="leading" id="sYB-mH-MWs"/>
+                                    <constraint firstItem="oQm-2H-Oyh" firstAttribute="top" secondItem="SFL-I3-dYQ" secondAttribute="top" id="uUB-ns-vmE"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2F-vb-tIw">
+                                <rect key="frame" x="20" y="454" width="353" height="281"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dm4-W7-q6k" firstAttribute="leading" secondItem="OvR-8J-A3y" secondAttribute="leading" id="1pu-uI-r56"/>
                             <constraint firstItem="dm4-W7-q6k" firstAttribute="top" secondItem="OvR-8J-A3y" secondAttribute="bottom" constant="30" id="Cpk-Br-zWJ"/>
+                            <constraint firstItem="H2F-vb-tIw" firstAttribute="leading" secondItem="SFL-I3-dYQ" secondAttribute="leading" id="DEW-RZ-2hJ"/>
+                            <constraint firstItem="SFL-I3-dYQ" firstAttribute="top" secondItem="dm4-W7-q6k" secondAttribute="bottom" constant="10" id="GaD-qe-Slg"/>
+                            <constraint firstItem="H2F-vb-tIw" firstAttribute="top" secondItem="SFL-I3-dYQ" secondAttribute="bottom" id="HxC-d2-hOw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CFC-9a-awh" secondAttribute="trailing" constant="20" id="ICX-S5-o0i"/>
+                            <constraint firstItem="H2F-vb-tIw" firstAttribute="trailing" secondItem="SFL-I3-dYQ" secondAttribute="trailing" id="RgQ-7D-wl9"/>
                             <constraint firstItem="CFC-9a-awh" firstAttribute="centerY" secondItem="OvR-8J-A3y" secondAttribute="centerY" id="UEk-yJ-MVF"/>
+                            <constraint firstItem="SFL-I3-dYQ" firstAttribute="leading" secondItem="dm4-W7-q6k" secondAttribute="leading" id="cAO-hE-nvd"/>
                             <constraint firstItem="dm4-W7-q6k" firstAttribute="trailing" secondItem="CFC-9a-awh" secondAttribute="trailing" id="etx-G2-K2I"/>
                             <constraint firstItem="OvR-8J-A3y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="klm-CQ-wZe"/>
                             <constraint firstItem="OvR-8J-A3y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="90" id="oCk-hL-Hde"/>
+                            <constraint firstItem="SFL-I3-dYQ" firstAttribute="trailing" secondItem="dm4-W7-q6k" secondAttribute="trailing" id="qEE-XW-Svc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="H2F-vb-tIw" secondAttribute="bottom" id="rkW-Cp-ynt"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="0EV-B8-R6A"/>
                     <connections>
+                        <outlet property="collectionViewOptions" destination="oQm-2H-Oyh" id="omG-Y0-SFK"/>
                         <outlet property="proBtnHolder" destination="CFC-9a-awh" id="zVu-f8-WdS"/>
                     </connections>
                 </viewController>

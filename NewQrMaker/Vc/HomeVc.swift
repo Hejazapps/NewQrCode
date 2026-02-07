@@ -20,6 +20,7 @@ class HomeVc: UIViewController {
         "Create AI QR"
     ]
     
+    @IBOutlet weak var collectionViewOptions: UICollectionView!
     
     @IBOutlet weak var proBtnHolder: UIView!
     override func viewDidLoad() {
