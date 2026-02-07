@@ -9,10 +9,13 @@ import UIKit
 
 class HomeVc: UIViewController {
     
+    @IBOutlet weak var dropDownCustomView: CustomView!
     
+    @IBOutlet weak var gradientimv: UIImageView!
+    @IBOutlet weak var collectionViewHolder: UIView!
     let options = [
-        "Batch Scan",
         "Create Template",
+        "Batch Scan",
         "Create Gif",
         "Collapse More",
         "Create Vcard",
@@ -20,17 +23,48 @@ class HomeVc: UIViewController {
         "Create AI QR"
     ]
     
-    @IBOutlet weak var collectionViewOptions: UICollectionView!
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+       
+    }
+    
+    
+    func createGradientImage(size: CGSize) -> UIImage? {
+        let colors = [
+            UIColor(red: 229/255, green: 31/255, blue: 31/255, alpha: 1).cgColor,
+            UIColor(red: 119/255, green: 89/255, blue: 228/255, alpha: 1).cgColor,
+            UIColor(red: 35/255, green: 181/255, blue: 254/255, alpha: 1).cgColor
+        ]
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = CGRect(origin: .zero, size: size)
+        gradientLayer.colors = colors
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        
+        gradientLayer.render(in: context)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        return image
+    }
+
     
     @IBOutlet weak var proBtnHolder: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.applyDesignStyle(to: self.proBtnHolder)
-        }
         
+        let gradientImage = createGradientImage(size: CGSize(width: 200, height: 200))
+        //gradientimv.image = gradientImage
         
     }
+    
+    
+    
     
     func applyDesignStyle(to view: UIView) {
         // Corner radius (fully rounded look)
@@ -84,3 +118,6 @@ class CustomView: UIView {
         }
     }
 }
+
+
+ 
