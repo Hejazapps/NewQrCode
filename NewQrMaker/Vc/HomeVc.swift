@@ -9,6 +9,18 @@ import UIKit
 
 class HomeVc: UIViewController {
     
+    
+    let options = [
+        "Batch Scan",
+        "Create Template",
+        "Create Gif",
+        "Collapse More",
+        "Create Vcard",
+        "Decorate QR Code",
+        "Create AI QR"
+    ]
+    
+    
     @IBOutlet weak var proBtnHolder: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,4 +45,41 @@ class HomeVc: UIViewController {
     
     
     
+}
+
+
+import UIKit
+
+@IBDesignable
+class CustomView: UIView {
+    
+    @IBInspectable var cornerRadius: CGFloat = 0 {
+        didSet {
+            layer.cornerRadius = cornerRadius
+            layer.masksToBounds = cornerRadius > 0
+        }
+    }
+    
+    @IBInspectable var borderWidth: CGFloat = 0 {
+        didSet {
+            layer.borderWidth = borderWidth
+        }
+    }
+    
+    @IBInspectable var borderColor: UIColor = .clear {
+        didSet {
+            layer.borderColor = borderColor.cgColor
+        }
+    }
+    
+    // Update border dynamically
+    func updateBorder(color: UIColor, width: CGFloat? = nil, radius: CGFloat? = nil) {
+        layer.borderColor = color.cgColor
+        if let w = width {
+            layer.borderWidth = w
+        }
+        if let r = radius {
+            layer.cornerRadius = r
+        }
+    }
 }
