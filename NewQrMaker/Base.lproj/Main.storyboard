@@ -16,10 +16,57 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OvR-8J-A3y">
+                                <rect key="frame" x="20" y="90" width="56" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFC-9a-awh">
+                                <rect key="frame" x="273" y="78" width="100" height="48"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pro" translatesAutoresizingMaskIntoConstraints="NO" id="EtQ-N6-YmV">
+                                        <rect key="frame" x="50" y="9" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="EtQ-N6-YmV" secondAttribute="height" multiplier="1:1" id="0v8-9Y-pjN"/>
+                                            <constraint firstAttribute="width" constant="30" id="ftd-se-HnF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDc-w1-XOe">
+                                        <rect key="frame" x="20.333333333333314" y="13.666666666666671" width="26.666666666666671" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="Yjc-IA-RAD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="EtQ-N6-YmV" firstAttribute="centerY" secondItem="CFC-9a-awh" secondAttribute="centerY" id="GLZ-wf-0hI"/>
+                                    <constraint firstAttribute="width" constant="100" id="Ubr-A6-qdW"/>
+                                    <constraint firstItem="EtQ-N6-YmV" firstAttribute="leading" secondItem="EDc-w1-XOe" secondAttribute="trailing" constant="3" id="eh4-dE-S3k"/>
+                                    <constraint firstItem="EDc-w1-XOe" firstAttribute="centerY" secondItem="EtQ-N6-YmV" secondAttribute="centerY" id="gbW-m3-ciT"/>
+                                    <constraint firstAttribute="trailing" secondItem="EtQ-N6-YmV" secondAttribute="trailing" constant="20" id="mPH-NC-SoU"/>
+                                    <constraint firstAttribute="height" constant="48" id="tgz-AX-5Pb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CFC-9a-awh" secondAttribute="trailing" constant="20" id="ICX-S5-o0i"/>
+                            <constraint firstItem="CFC-9a-awh" firstAttribute="centerY" secondItem="OvR-8J-A3y" secondAttribute="centerY" id="UEk-yJ-MVF"/>
+                            <constraint firstItem="OvR-8J-A3y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="klm-CQ-wZe"/>
+                            <constraint firstItem="OvR-8J-A3y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="90" id="oCk-hL-Hde"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="0EV-B8-R6A"/>
+                    <connections>
+                        <outlet property="proBtnHolder" destination="CFC-9a-awh" id="zVu-f8-WdS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -31,6 +78,7 @@
                 <tabBarController storyboardIdentifier="MainTabVc" automaticallyAdjustsScrollViewInsets="NO" id="sEm-Ry-L86" customClass="MainTabVc" customModule="NewQrMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RWl-uf-zIa">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -112,6 +160,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pro" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
