@@ -4,4 +4,19 @@
 "Draft" = "ড্রাফট";
 "Settings" = "সেটিংস";
 
+"Expand More" = "আরও দেখুন";
+"Collapse More" = "কম দেখুন";
+"Create Template" = "টেমপ্লেট তৈরি করুন";
+"Batch Scan" = "একাধিক স্ক্যান";
 
+"Create Gif" = "গিফ তৈরি করুন";
+"Create Vcard" = "ভিকার্ড তৈরি করুন";
+"Decorate QR Code" = "কিউআর কোড সাজান";
+"Create AI QR" = "এআই কিউআর তৈরি করুন";
+
+"Create" = "তৈরি করুন";
+"Qr Code" = "কিউআর কোড";
+"Bar Code" = "বারকোড";
+"Pro" = "প্রো";
+"Trending" = "ট্রেন্ডিং";
+"View All" = "সব দেখুন";

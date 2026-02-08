@@ -11,6 +11,20 @@ import FirebaseDatabase
 
 class HomeVc: UIViewController {
     
+    @IBOutlet weak var viewAll: UILabel!
+    @IBOutlet weak var tlabel: UILabel!
+    @IBOutlet weak var prolabel: UILabel!
+    @IBOutlet weak var hlabel: UILabel!
+    @IBOutlet weak var bld: UILabel!
+    @IBOutlet weak var bl1: UILabel!
+    @IBOutlet weak var cld: UILabel!
+    @IBOutlet weak var cl1: UILabel!
+    @IBOutlet weak var option6: UILabel!
+    @IBOutlet weak var option5: UILabel!
+    @IBOutlet weak var option4: UILabel!
+    @IBOutlet weak var option3: UILabel!
+    @IBOutlet weak var option2: UILabel!
+    @IBOutlet weak var option1: UILabel!
     var gifData: [[String: String]] = []
     var totalCategory = [String]()
     var parsedTemplate: [String: [Dictionary<String,String>]] = [:]
@@ -48,6 +62,30 @@ class HomeVc: UIViewController {
         proBtnHolder.applyBlurShadowWithCorner(radius: proBtnHolder.frame.size.height / 2.0)
     }
     
+    func setUplabel() {
+        option1.text = "Create Template".localize()
+        option2.text = "Batch Scan".localize()
+        option3.text = "Create Gif".localize()
+        option4.text = "Create Vcard".localize()
+        option5.text = "Decorate QR Code".localize()
+        option6.text = "Create AI QR".localize()
+        cl1.text = "Create".localize()
+        bl1.text = "Create".localize()
+        
+        cld.text = "Qr Code".localize()
+        bld.text = "Bar Code".localize()
+        
+        hlabel.text = "Home".localize()
+        prolabel.text = "Pro".localize()
+        
+        tlabel.text = "Trending".localize()
+        viewAll.text = "View All".localize()
+        
+        
+        
+        expandLabel.text = "Collapse More".localize()
+        
+    }
     
     func reigsterXib() {
         let nib = UINib(nibName: "ImageCell", bundle: .main)
@@ -163,7 +201,7 @@ class HomeVc: UIViewController {
         gradientimv.image = gradientImage
         self.reigsterXib()
         self.getAllData()
-        
+        self.setUplabel()
         
         
     }
@@ -216,13 +254,13 @@ class HomeVc: UIViewController {
             bottomView.isHidden = true
             collapseIcon.image = UIImage(named: "down")
             heightForView.constant = 130
-            expandLabel.text = "Expand More"
+            expandLabel.text = "Expand More".localize()
         }
         else {
             bottomView.isHidden = false
             collapseIcon.image = UIImage(named: "up")
             heightForView.constant = 250
-            expandLabel.text = "Collapse More"
+            expandLabel.text = "Collapse More".localize()
         }
         
     }
@@ -288,13 +326,13 @@ extension HomeVc: UICollectionViewDelegateFlowLayout {
         let numberOfItemsPerRow: CGFloat = CGFloat(element)
         
         let bounds = collectionViewHolder.bounds
-        let width = (bounds.size.width - 10*(numberOfItemsPerRow + 1)) / numberOfItemsPerRow
+        let width = (bounds.size.width - 10*(numberOfItemsPerRow)) / numberOfItemsPerRow
         
         return CGSize(width: width, height: width)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 10)
+        return UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
