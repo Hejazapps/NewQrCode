@@ -32,6 +32,12 @@ class ImageCell: UICollectionViewCell {
         giic.isHidden = true
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layer.cornerRadius = 10
+        layer.masksToBounds = true
+    }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         currentGifURL = nil

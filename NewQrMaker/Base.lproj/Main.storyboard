@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24127" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sEm-Ry-L86">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -603,6 +602,12 @@ QR Code</string>
                                         </collectionViewFlowLayout>
                                         <cells/>
                                     </collectionView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J62-j4-5ds">
+                                        <rect key="frame" x="304.66666666666669" y="15.333333333333371" width="49.333333333333314" height="15.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -611,6 +616,7 @@ QR Code</string>
                                     <constraint firstItem="Arg-j9-kuk" firstAttribute="top" secondItem="H2F-vb-tIw" secondAttribute="top" constant="10" id="c81-Rf-g9K"/>
                                     <constraint firstItem="D6n-xX-kz9" firstAttribute="top" secondItem="Arg-j9-kuk" secondAttribute="bottom" constant="10" id="ltq-50-OLN"/>
                                     <constraint firstAttribute="bottom" secondItem="D6n-xX-kz9" secondAttribute="bottom" id="x8D-ef-YGd"/>
+                                    <constraint firstItem="J62-j4-5ds" firstAttribute="centerY" secondItem="Arg-j9-kuk" secondAttribute="centerY" constant="1" id="yER-1r-tbQ"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -622,6 +628,7 @@ QR Code</string>
                             <constraint firstItem="dm4-W7-q6k" firstAttribute="top" secondItem="OvR-8J-A3y" secondAttribute="bottom" constant="30" id="Cpk-Br-zWJ"/>
                             <constraint firstItem="H2F-vb-tIw" firstAttribute="leading" secondItem="SFL-I3-dYQ" secondAttribute="leading" id="DEW-RZ-2hJ"/>
                             <constraint firstItem="SFL-I3-dYQ" firstAttribute="top" secondItem="dm4-W7-q6k" secondAttribute="bottom" constant="20" id="GaD-qe-Slg"/>
+                            <constraint firstItem="J62-j4-5ds" firstAttribute="trailing" secondItem="dA5-FQ-fqJ" secondAttribute="trailing" constant="1" id="HAk-A5-2U5"/>
                             <constraint firstItem="H2F-vb-tIw" firstAttribute="top" secondItem="SFL-I3-dYQ" secondAttribute="bottom" id="HxC-d2-hOw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CFC-9a-awh" secondAttribute="trailing" constant="20" id="ICX-S5-o0i"/>
                             <constraint firstItem="H2F-vb-tIw" firstAttribute="trailing" secondItem="SFL-I3-dYQ" secondAttribute="trailing" id="RgQ-7D-wl9"/>

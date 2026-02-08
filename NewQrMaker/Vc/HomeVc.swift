@@ -376,7 +376,7 @@ extension HomeVc: UICollectionViewDataSource {
         cell.imv.contentMode = .scaleAspectFit
         cell.layoutIfNeeded()
         
-        let cellWidth = cell.frame.width - 20
+        let cellWidth = cell.frame.width - 25
         cell.widthForImv.constant = cellWidth
         cell.heightForimv.constant = cellWidth
         
@@ -428,8 +428,7 @@ extension HomeVc: UICollectionViewDataSource {
         } else {
             activityIndicator.stopAnimating()
         }
-        cell.contentView.layer.cornerRadius = 10.0
-        cell.contentView.clipsToBounds = true
+       
         
         
         return cell

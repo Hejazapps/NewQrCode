@@ -25,7 +25,7 @@
                         </constraints>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smallPro" translatesAutoresizingMaskIntoConstraints="NO" id="MIv-mJ-yl7">
-                        <rect key="frame" x="173" y="5" width="22" height="22"/>
+                        <rect key="frame" x="171" y="7" width="22" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="MIv-mJ-yl7" secondAttribute="height" multiplier="1:1" id="8IA-cN-Sxl"/>
                             <constraint firstAttribute="width" constant="22" id="abx-lv-8o9"/>
@@ -45,7 +45,7 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQo-EH-K4P">
-                        <rect key="frame" x="173" y="5" width="22" height="22"/>
+                        <rect key="frame" x="171" y="7" width="22" height="22"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="Pro Icon (2)"/>
                     </button>
@@ -60,7 +60,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="cQo-EH-K4P" firstAttribute="centerY" secondItem="MIv-mJ-yl7" secondAttribute="centerY" id="Bao-Uh-4rD"/>
-                <constraint firstAttribute="trailing" secondItem="MIv-mJ-yl7" secondAttribute="trailing" constant="5" id="FBL-Es-hzG"/>
+                <constraint firstAttribute="trailing" secondItem="MIv-mJ-yl7" secondAttribute="trailing" constant="7" id="FBL-Es-hzG"/>
                 <constraint firstItem="VDi-JJ-vYZ" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Fhq-Ro-d6v"/>
                 <constraint firstItem="cQo-EH-K4P" firstAttribute="width" secondItem="MIv-mJ-yl7" secondAttribute="width" id="Jpy-Ri-olS"/>
                 <constraint firstItem="dfm-zE-Ydd" firstAttribute="centerY" secondItem="cLd-RD-gI3" secondAttribute="centerY" id="Jx6-jC-Pej"/>
@@ -75,7 +75,7 @@
                 <constraint firstItem="dfm-zE-Ydd" firstAttribute="width" secondItem="cLd-RD-gI3" secondAttribute="width" id="een-MT-Ovn"/>
                 <constraint firstItem="cLd-RD-gI3" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="fX9-3c-9Gn"/>
                 <constraint firstItem="f4N-em-Xwg" firstAttribute="centerY" secondItem="jI6-My-eX3" secondAttribute="centerY" id="gpU-Tv-1Ou"/>
-                <constraint firstItem="MIv-mJ-yl7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="jTN-18-SDf"/>
+                <constraint firstItem="MIv-mJ-yl7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="7" id="jTN-18-SDf"/>
                 <constraint firstItem="VDi-JJ-vYZ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="opR-vz-znQ"/>
                 <constraint firstItem="dfm-zE-Ydd" firstAttribute="height" secondItem="cLd-RD-gI3" secondAttribute="height" id="q33-sL-thd"/>
                 <constraint firstItem="f4N-em-Xwg" firstAttribute="centerX" secondItem="jI6-My-eX3" secondAttribute="centerX" id="q6i-wj-pTT"/>
