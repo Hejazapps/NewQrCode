@@ -34,6 +34,7 @@
 		C879B3882F37D042004822E9 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = C879B3872F37D042004822E9 /* SDWebImage */; };
 		C879B38A2F37D042004822E9 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C879B3892F37D042004822E9 /* SDWebImageMapKit */; };
 		C879B38D2F37D077004822E9 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = C879B38C2F37D077004822E9 /* SwiftyStoreKit */; };
+		C880985A2F3818AE00A16FAB /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = C88098592F3818AE00A16FAB /* ProgressHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C879B2D12F37C66C004822E9 /* FirebaseAppDistribution-Beta in Frameworks */,
+				C880985A2F3818AE00A16FAB /* ProgressHUD in Frameworks */,
 				C879B2DD2F37C66C004822E9 /* FirebaseFirestore in Frameworks */,
 				C879B38A2F37D042004822E9 /* SDWebImageMapKit in Frameworks */,
 				C879B2D52F37C66C004822E9 /* FirebaseAuthCombine-Community in Frameworks */,
@@ -162,6 +164,7 @@
 				C879B3872F37D042004822E9 /* SDWebImage */,
 				C879B3892F37D042004822E9 /* SDWebImageMapKit */,
 				C879B38C2F37D077004822E9 /* SwiftyStoreKit */,
+				C88098592F3818AE00A16FAB /* ProgressHUD */,
 			);
 			productName = NewQrMaker;
 			productReference = C860EACD2F36FE600009B258 /* NewQrMaker.app */;
@@ -196,6 +199,7 @@
 				C879B2C32F37C66C004822E9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				C879B3862F37D042004822E9 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				C879B38B2F37D077004822E9 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */,
+				C88098582F3818AE00A16FAB /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C860EACE2F36FE600009B258 /* Products */;
@@ -243,7 +247,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -278,7 +282,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,6 +473,14 @@
 				minimumVersion = 0.16.4;
 			};
 		};
+		C88098582F3818AE00A16FAB /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/relatedcode/ProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -606,6 +618,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C879B38B2F37D077004822E9 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */;
 			productName = SwiftyStoreKit;
+		};
+		C88098592F3818AE00A16FAB /* ProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C88098582F3818AE00A16FAB /* XCRemoteSwiftPackageReference "ProgressHUD" */;
+			productName = ProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

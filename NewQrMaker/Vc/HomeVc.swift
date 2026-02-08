@@ -19,13 +19,13 @@ class HomeVc: UIViewController {
     var trendingData: [[String: String]] = []
     var savedDictionaries: [[String: String]] = []
     var customizeData: [[String: String]] = []
-    
-    
+    var element = 3
+    var categoryName = [String]()
     @IBOutlet weak var expandLabel: UILabel!
     @IBOutlet weak var heightForView: NSLayoutConstraint!
     @IBOutlet weak var collapseIcon: UIImageView!
     var isExpand = true
-    
+    var selectedIndexPath: IndexPath?
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var gradientimv: UIImageView!
@@ -53,7 +53,6 @@ class HomeVc: UIViewController {
         let nib = UINib(nibName: "ImageCell", bundle: .main)
         collectionView.register(nib, forCellWithReuseIdentifier: "ImageCell")
         
-        collectionView.delegate = self
         collectionView.delegate = self
         collectionView.dataSource = self
     }
@@ -161,6 +160,44 @@ class HomeVc: UIViewController {
     }
     
     
+    func loadDictionariesFromUserDefaults() {
+        let defaults = UserDefaults.standard
+        
+        if let data = defaults.data(forKey: "SavedDictionariesKey"),
+           let decoded = try? PropertyListDecoder().decode([[String: String]].self, from: data) {
+            savedDictionaries = decoded  // Load saved data
+        } else {
+               
+        }
+        
+        if let savedFruits = UserDefaults.standard.stringArray(forKey: "savedCategory") {
+            categoryName = savedFruits
+        } else {
+            print("No fruits found in UserDefaults.")
+        }
+        
+       
+    }
+    
+    func saveDictionariesToUserDefaults() {
+        let defaults = UserDefaults.standard
+        if let data = try? PropertyListEncoder().encode(savedDictionaries) {
+            defaults.set(data, forKey: "SavedDictionariesKey")  // Save to UserDefaults
+        }
+        
+        UserDefaults.standard.set(categoryName, forKey: "savedCategory")
+    }
+    
+    
+    func showNoConnectionAlert() {
+        let alert = UIAlertController(title: "No Internet".localize(), message: "internet_connection".localize(), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ok".localize(), style: .default, handler: nil))
+        
+        if let topVC = UIApplication.topMostViewController {
+            topVC.present(alert, animated: true, completion: nil)
+        }
+    }
+    
     
     @IBAction func expandCollapse(_ sender: Any) {
         
@@ -237,7 +274,30 @@ class CustomView: UIView {
 }
 
 
- 
+extension HomeVc: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let numberOfItemsPerRow: CGFloat = CGFloat(element)
+        
+        let bounds = UIScreen.main.bounds
+        let width = (bounds.size.width - 10*(numberOfItemsPerRow+2)) / numberOfItemsPerRow
+        
+        return CGSize(width: width, height: width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+    
+  
+}
 
 extension HomeVc: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
@@ -252,11 +312,10 @@ extension HomeVc: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageCell
         cell.mm.isHidden = true
         
+        var dic = trendingData[indexPath.row]
         
      
-        guard let dic = trendingData[indexPath.row] else {
-            return cell
-        }
+       
         loadDictionariesFromUserDefaults()
         
         cell.imv.sd_cancelCurrentImageLoad()
@@ -274,8 +333,9 @@ extension HomeVc: UICollectionViewDataSource {
             cell.favImv.image = UIImage(named: "Not Selected")
         }
         
-        cell.favBtn.tag = indexPath.row + 2000
-        cell.favBtn.addTarget(self, action: #selector(favoriteButtonTapped(_:)), for: .touchUpInside)
+        
+        cell.favBtn.isHidden = true
+        
 
         if (!Store.sharedInstance.isActiveSubscription()) {
             cell.proIcon.isHidden = false

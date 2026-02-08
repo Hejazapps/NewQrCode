@@ -203,7 +203,7 @@ extension IAPManager: SKPaymentTransactionObserver {
     }
     
     private func restore(transaction: SKPaymentTransaction) {
-         IHProgressHUD.dismiss()
+         //IHProgressHUD.dismiss()
         guard let productIdentifier = transaction.original?.payment.productIdentifier else { return }
         print("restore... \(productIdentifier)")
        
@@ -243,7 +243,7 @@ extension IAPManager: SKPaymentTransactionObserver {
         
     }
     private func fail(transaction: SKPaymentTransaction) {
-         IHProgressHUD.dismiss()
+         //IHProgressHUD.dismiss()
         print("fail...")
         if let transactionError = transaction.error as NSError?,
             let localizedDescription = transaction.error?.localizedDescription,
