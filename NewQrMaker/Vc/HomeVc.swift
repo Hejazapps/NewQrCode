@@ -45,7 +45,7 @@ class HomeVc: UIViewController {
         super.viewDidLayoutSubviews()
         gradientimv.layer.cornerRadius = 20.0
         gradientimv.clipsToBounds = true
-       
+        proBtnHolder.applyBlurShadowWithCorner(radius: proBtnHolder.frame.size.height / 2.0)
     }
     
     
@@ -90,6 +90,14 @@ class HomeVc: UIViewController {
                         self.trendingData = urlArray
                         
                         // Print trending data
+                        
+                        self.trendingData = urlArray.sorted {
+                               if let id1 = $0["id"], let id2 = $1["id"] {
+                                   return Int(id1) ?? 0 > Int(id2) ?? 0
+                               }
+                               return false
+                           }
+                        
                         print("Trending data count: \(self.trendingData)")
                         for (index, item) in self.trendingData.enumerated() {
                             let name = item["name"] ?? "No name"
@@ -111,7 +119,7 @@ class HomeVc: UIViewController {
             
             // Update UI on main thread
             DispatchQueue.main.async {
-                // Reload collection views or tables as needed
+                self.collectionView.reloadData()
             }
             
         }) { error in
@@ -155,6 +163,7 @@ class HomeVc: UIViewController {
         gradientimv.image = gradientImage
         self.reigsterXib()
         self.getAllData()
+        
         
         
     }
@@ -278,14 +287,14 @@ extension HomeVc: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let numberOfItemsPerRow: CGFloat = CGFloat(element)
         
-        let bounds = UIScreen.main.bounds
-        let width = (bounds.size.width - 10*(numberOfItemsPerRow+2)) / numberOfItemsPerRow
+        let bounds = collectionViewHolder.bounds
+        let width = (bounds.size.width - 10*(numberOfItemsPerRow + 1)) / numberOfItemsPerRow
         
         return CGSize(width: width, height: width)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        return UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 10)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -312,7 +321,7 @@ extension HomeVc: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageCell
         cell.mm.isHidden = true
         
-        var dic = trendingData[indexPath.row]
+        let dic = trendingData[indexPath.row]
         
      
        
@@ -335,16 +344,23 @@ extension HomeVc: UICollectionViewDataSource {
         
         
         cell.favBtn.isHidden = true
+        cell.favImv.isHidden = true
+        
+        cell.proIcon.isHidden = true
+        cell.proBtn.isHidden = true
         
 
         if (!Store.sharedInstance.isActiveSubscription()) {
             cell.proIcon.isHidden = false
+            cell.proBtn.isHidden = false
         } else {
             cell.proIcon.isHidden = true
+            cell.proBtn.isHidden = true
         }
         
         if indexPath.row < 3 {
             cell.proIcon.isHidden = true
+            cell.proBtn.isHidden = true
         }
         
         let activityIndicator = UIActivityIndicatorView(style: .medium)
@@ -412,11 +428,26 @@ extension HomeVc: UICollectionViewDataSource {
         } else {
             activityIndicator.stopAnimating()
         }
+        cell.contentView.layer.cornerRadius = 10.0
+        cell.contentView.clipsToBounds = true
+        
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
+    }
+}
+
+extension UIView {
+    func applyBlurShadowWithCorner(radius: CGFloat = 8) {
+        self.layer.cornerRadius = radius
+        
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.06
+        self.layer.shadowOffset = CGSize(width: 0, height: 4)
+        self.layer.shadowRadius = 1   // Blur 2 ≈ radius 1
+        self.layer.masksToBounds = false
     }
 }
