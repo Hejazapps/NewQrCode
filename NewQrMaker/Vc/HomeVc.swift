@@ -54,6 +54,18 @@ class HomeVc: UIViewController {
         "Create AI QR"
     ]
     
+   
+    @IBAction func gotoTrending(_ sender: Any) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "AllViewData") as!  AllViewData
+        vc.modalPresentationStyle = .fullScreen
+      
+        vc.trendingData = trendingData
+        
+        
+        self.transitionVc(vc: vc, duration: 0.4, type: .fromRight)
+        
+    }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -488,3 +500,29 @@ extension UIView {
         self.layer.masksToBounds = false
     }
 }
+
+extension UIViewController {
+    
+    func transitionVc(vc: UIViewController, duration: CFTimeInterval, type: CATransitionSubtype) {
+        // Safely get the window
+        guard let window = view.window ?? UIApplication.shared.connectedScenes
+                .compactMap({ ($0 as? UIWindowScene)?.keyWindow })
+                .first else {
+            print("Window not available. Cannot perform transition.")
+            return
+        }
+
+        // Configure transition
+        let transition = CATransition()
+        transition.duration = duration
+        transition.type = .push
+        transition.subtype = type
+        transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+
+        // Add transition to window
+        window.layer.add(transition, forKey: kCATransition)
+
+        // Present view controller
+        present(vc, animated: false, completion: nil)
+    }
+ }

@@ -609,12 +609,24 @@ QR Code</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6p-2s-1yF">
+                                        <rect key="frame" x="305.33333333333331" y="15.666666666666631" width="50.333333333333314" height="16.666666666666671"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="gotoTrending:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AzC-QZ-JEQ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="R6p-2s-1yF" firstAttribute="height" secondItem="J62-j4-5ds" secondAttribute="height" constant="1" id="4f6-y9-HM8"/>
+                                    <constraint firstItem="R6p-2s-1yF" firstAttribute="centerY" secondItem="J62-j4-5ds" secondAttribute="centerY" constant="1" id="8cF-Rk-him"/>
+                                    <constraint firstItem="R6p-2s-1yF" firstAttribute="width" secondItem="J62-j4-5ds" secondAttribute="width" constant="1" id="LTF-H1-NTE"/>
                                     <constraint firstItem="D6n-xX-kz9" firstAttribute="leading" secondItem="H2F-vb-tIw" secondAttribute="leading" id="MYR-GG-jsu"/>
                                     <constraint firstAttribute="trailing" secondItem="D6n-xX-kz9" secondAttribute="trailing" id="ZUZ-jM-ilr"/>
                                     <constraint firstItem="Arg-j9-kuk" firstAttribute="top" secondItem="H2F-vb-tIw" secondAttribute="top" constant="10" id="c81-Rf-g9K"/>
+                                    <constraint firstItem="R6p-2s-1yF" firstAttribute="centerX" secondItem="J62-j4-5ds" secondAttribute="centerX" constant="1" id="cEC-YA-3HU"/>
                                     <constraint firstItem="D6n-xX-kz9" firstAttribute="top" secondItem="Arg-j9-kuk" secondAttribute="bottom" constant="10" id="ltq-50-OLN"/>
                                     <constraint firstAttribute="bottom" secondItem="D6n-xX-kz9" secondAttribute="bottom" id="x8D-ef-YGd"/>
                                     <constraint firstItem="J62-j4-5ds" firstAttribute="centerY" secondItem="Arg-j9-kuk" secondAttribute="centerY" constant="1" id="yER-1r-tbQ"/>
@@ -1041,6 +1053,7 @@ connection</string>
                                         <buttonConfiguration key="configuration" style="plain" title="Back"/>
                                         <connections>
                                             <action selector="backBtnPressed:" destination="fh5-3a-XFv" eventType="touchUpInside" id="Ofl-Wl-iiz"/>
+                                            <action selector="dimissView:" destination="ukJ-gx-7vl" eventType="touchUpInside" id="O8b-uz-K5f"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1077,6 +1090,9 @@ connection</string>
                             <constraint firstItem="V3Z-SF-3yU" firstAttribute="trailing" secondItem="2Qv-Eu-i3w" secondAttribute="trailing" id="xER-I7-jgj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="2Qv-Eu-i3w" id="ets-ky-G6J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3fK-vI-Dt5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

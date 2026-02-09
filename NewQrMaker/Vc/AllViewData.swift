@@ -12,17 +12,38 @@ class AllViewData: UIViewController {
     var selectedIndexPath: IndexPath?
     var trendingData: [[String: String]] = []
     var savedDictionaries: [[String: String]] = []
-    var customizeData: [[String: String]] = []
+ 
     var categoryName = [String]()
     var element = 3
     
+    @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loadDictionariesFromUserDefaults()
+        self.reigsterXib()
 
         // Do any additional setup after loading the view.
     }
     
-
+    func reigsterXib() {
+        let nib = UINib(nibName: "ImageCell", bundle: .main)
+        collectionView.register(nib, forCellWithReuseIdentifier: "ImageCell")
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+    }
+    
+    @IBAction func dimissView(_ sender: Any) {
+        
+        let transition = CATransition()
+        transition.duration = 0.4
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromLeft
+        view.window?.layer.add(transition, forKey: "leftToRightTransition")
+        dismiss(animated: false, completion: nil)
+    }
+    
     func loadDictionariesFromUserDefaults() {
         let defaults = UserDefaults.standard
         
@@ -45,13 +66,19 @@ class AllViewData: UIViewController {
 }
 
 extension AllViewData: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let numberOfItemsPerRow: CGFloat = CGFloat(element)
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let width = UIScreen.main.bounds.size.width - 2*10
-        let width1 = width - 10*(numberOfItemsPerRow + 2) / numberOfItemsPerRow
+        let itemsPerRow: CGFloat = CGFloat(element)
+        let padding: CGFloat = 10
+        let interItemSpacing: CGFloat = 10
         
-        return CGSize(width: width1, height: width1)
+        let totalSpacing = padding * 3 + (itemsPerRow - 1) * interItemSpacing
+        let availableWidth = collectionView.bounds.width - totalSpacing
+        let itemWidth = availableWidth / itemsPerRow
+        
+        return CGSize(width: itemWidth, height: itemWidth)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
