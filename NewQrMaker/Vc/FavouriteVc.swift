@@ -34,7 +34,6 @@ class FavouriteVc: UIViewController {
         subTitle.text = "fave_subtext".localize()
         templatel.text = "Explore".localize() + "->"
         fav.text = "Favourite".localize()
-        backBtn.setTitle("Back".localize(), for: .normal)
         // Do any additional setup after loading the view.
     }
     

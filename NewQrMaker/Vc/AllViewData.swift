@@ -16,12 +16,13 @@ class AllViewData: UIViewController {
     var categoryName = [String]()
     var element = 3
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadDictionariesFromUserDefaults()
         self.reigsterXib()
-
+        titleLabel.text = "Trending".localize()
         // Do any additional setup after loading the view.
     }
     
