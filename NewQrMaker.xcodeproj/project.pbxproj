@@ -39,6 +39,7 @@
 		C87A5F222F3903C800D09B3E /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = C87A5F212F3903C800D09B3E /* SVProgressHUD */; };
 		C87A5F512F39083E00D09B3E /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = C87A5F502F39083E00D09B3E /* SwiftyGif */; };
 		C880985A2F3818AE00A16FAB /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = C88098592F3818AE00A16FAB /* ProgressHUD */; };
+		C881B8D72F396AEC00254B76 /* Mantis in Frameworks */ = {isa = PBXBuildFile; productRef = C881B8D62F396AEC00254B76 /* Mantis */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 				C879B2C92F37C66C004822E9 /* FirebaseAnalytics in Frameworks */,
 				C87A5F032F38FBF000D09B3E /* Siren in Frameworks */,
 				C879B2EB2F37C66C004822E9 /* FirebaseMessaging in Frameworks */,
+				C881B8D72F396AEC00254B76 /* Mantis in Frameworks */,
 				C879B2E92F37C66C004822E9 /* FirebaseMLModelDownloader in Frameworks */,
 				C879B2ED2F37C66C004822E9 /* FirebasePerformance in Frameworks */,
 				C879B2D72F37C66C004822E9 /* FirebaseCore in Frameworks */,
@@ -177,6 +179,7 @@
 				C87A5F022F38FBF000D09B3E /* Siren */,
 				C87A5F212F3903C800D09B3E /* SVProgressHUD */,
 				C87A5F502F39083E00D09B3E /* SwiftyGif */,
+				C881B8D62F396AEC00254B76 /* Mantis */,
 			);
 			productName = NewQrMaker;
 			productReference = C860EACD2F36FE600009B258 /* NewQrMaker.app */;
@@ -216,6 +219,7 @@
 				C87A5F012F38FBF000D09B3E /* XCRemoteSwiftPackageReference "Siren" */,
 				C87A5F202F3903C800D09B3E /* XCRemoteSwiftPackageReference "SVProgressHUD" */,
 				C87A5F4F2F39083E00D09B3E /* XCRemoteSwiftPackageReference "SwiftyGif" */,
+				C881B8D52F396AEC00254B76 /* XCRemoteSwiftPackageReference "Mantis" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C860EACE2F36FE600009B258 /* Products */;
@@ -529,6 +533,14 @@
 				minimumVersion = 15.0.1;
 			};
 		};
+		C881B8D52F396AEC00254B76 /* XCRemoteSwiftPackageReference "Mantis" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/guoyingtao/Mantis.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -691,6 +703,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C88098582F3818AE00A16FAB /* XCRemoteSwiftPackageReference "ProgressHUD" */;
 			productName = ProgressHUD;
+		};
+		C881B8D62F396AEC00254B76 /* Mantis */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C881B8D52F396AEC00254B76 /* XCRemoteSwiftPackageReference "Mantis" */;
+			productName = Mantis;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

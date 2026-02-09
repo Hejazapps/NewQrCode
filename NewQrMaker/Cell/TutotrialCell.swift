@@ -255,12 +255,16 @@ extension TutotrialCell: UICollectionViewDataSource {
 
         if (!Store.sharedInstance.isActiveSubscription()) {
             cell.proIcon.isHidden = false
+            cell.proBtn.isHidden = false
         } else {
             cell.proIcon.isHidden = true
+            cell.proBtn.isHidden = true
+        } else {
         }
         
         if indexPath.row < 3 {
             cell.proIcon.isHidden = true
+            cell.proBtn.isHidden = true
         }
         
         let activityIndicator = UIActivityIndicatorView(style: .medium)

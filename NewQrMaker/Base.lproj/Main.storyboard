@@ -1012,6 +1012,76 @@ connection</string>
             </objects>
             <point key="canvasLocation" x="1374.8091603053435" y="-565.49295774647885"/>
         </scene>
+        <!--All View Data-->
+        <scene sceneID="zdZ-WD-baH">
+            <objects>
+                <viewController storyboardIdentifier="AllViewData" id="ukJ-gx-7vl" customClass="AllViewData" customModule="NewQrMaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DlE-o5-Xe4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMG-3o-8nA">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Trending" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88o-am-uMc">
+                                        <rect key="frame" x="158.33333333333334" y="64.333333333333329" width="76.666666666666657" height="21.666666666666671"/>
+                                        <color key="tintColor" systemColor="linkColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eb-8m-OXQ">
+                                        <rect key="frame" x="-5" y="50" width="100" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="6eb-8m-OXQ" secondAttribute="height" multiplier="2:1" id="pEw-93-XhX"/>
+                                            <constraint firstAttribute="width" constant="100" id="sRH-xZ-sbj"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="fh5-3a-XFv" eventType="touchUpInside" id="Ofl-Wl-iiz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="88o-am-uMc" firstAttribute="centerY" secondItem="oMG-3o-8nA" secondAttribute="centerY" constant="25" id="6Qh-N0-h3O"/>
+                                    <constraint firstItem="6eb-8m-OXQ" firstAttribute="centerY" secondItem="88o-am-uMc" secondAttribute="centerY" id="Jhp-Us-Dyi"/>
+                                    <constraint firstItem="6eb-8m-OXQ" firstAttribute="leading" secondItem="oMG-3o-8nA" secondAttribute="leading" constant="-5" id="V1y-kH-yLZ"/>
+                                    <constraint firstAttribute="height" constant="100" id="WNj-gK-ib8"/>
+                                    <constraint firstItem="88o-am-uMc" firstAttribute="centerX" secondItem="oMG-3o-8nA" secondAttribute="centerX" id="uNK-FX-PY4"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Qv-Eu-i3w">
+                                <rect key="frame" x="0.0" y="100" width="393" height="752"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SuS-ud-hKq">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="V3Z-SF-3yU"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="oMG-3o-8nA" firstAttribute="leading" secondItem="DlE-o5-Xe4" secondAttribute="leading" id="EHh-1y-XfQ"/>
+                            <constraint firstAttribute="bottom" secondItem="2Qv-Eu-i3w" secondAttribute="bottom" id="Gyz-Qz-LMx"/>
+                            <constraint firstItem="V3Z-SF-3yU" firstAttribute="trailing" secondItem="oMG-3o-8nA" secondAttribute="trailing" id="He6-Hk-uZT"/>
+                            <constraint firstItem="2Qv-Eu-i3w" firstAttribute="leading" secondItem="DlE-o5-Xe4" secondAttribute="leading" id="LdZ-9e-qxa"/>
+                            <constraint firstItem="2Qv-Eu-i3w" firstAttribute="top" secondItem="oMG-3o-8nA" secondAttribute="bottom" id="SL7-in-aZQ"/>
+                            <constraint firstItem="oMG-3o-8nA" firstAttribute="top" secondItem="DlE-o5-Xe4" secondAttribute="top" id="eY9-cw-wq9"/>
+                            <constraint firstItem="V3Z-SF-3yU" firstAttribute="trailing" secondItem="2Qv-Eu-i3w" secondAttribute="trailing" id="xER-I7-jgj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3fK-vI-Dt5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2022" y="9"/>
+        </scene>
         <!--Favourite Vc-->
         <scene sceneID="6oP-nm-TzJ">
             <objects>
@@ -1025,9 +1095,9 @@ connection</string>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Favourite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXA-dZ-Tee">
                                         <rect key="frame" x="156.33333333333334" y="64.333333333333329" width="80.333333333333343" height="21.666666666666671"/>
-                                        <color key="tintColor" systemColor="linkColor"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <color key="textColor" red="0.0039215686269999999" green="0.45882352939999999" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaY-dH-oTL">
@@ -1036,6 +1106,7 @@ connection</string>
                                             <constraint firstAttribute="width" secondItem="aaY-dH-oTL" secondAttribute="height" multiplier="2:1" id="jDf-xS-ytj"/>
                                             <constraint firstAttribute="width" constant="100" id="tT4-gq-a2k"/>
                                         </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Back"/>
                                         <connections>
@@ -1043,7 +1114,7 @@ connection</string>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="AXA-dZ-Tee" firstAttribute="centerX" secondItem="7ui-Qt-s9j" secondAttribute="centerX" id="JrK-nX-Ncg"/>
                                     <constraint firstAttribute="height" constant="100" id="KOA-XK-tYf"/>
@@ -1139,7 +1210,7 @@ easy access later</string>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jFv-jr-Pfl"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jFv-jr-Pfl" firstAttribute="trailing" secondItem="gYa-g4-mAK" secondAttribute="trailing" id="AVq-Jb-q8B"/>
                             <constraint firstItem="SPF-Fi-cvQ" firstAttribute="leading" secondItem="jFv-jr-Pfl" secondAttribute="leading" id="Gei-yn-Xfj"/>
