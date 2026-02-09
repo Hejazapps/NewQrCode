@@ -40,6 +40,11 @@
 		C87A5F512F39083E00D09B3E /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = C87A5F502F39083E00D09B3E /* SwiftyGif */; };
 		C880985A2F3818AE00A16FAB /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = C88098592F3818AE00A16FAB /* ProgressHUD */; };
 		C881B8D72F396AEC00254B76 /* Mantis in Frameworks */ = {isa = PBXBuildFile; productRef = C881B8D62F396AEC00254B76 /* Mantis */; };
+		C8FF56742F3A385300E34D7C /* EFQRCode in Frameworks */ = {isa = PBXBuildFile; productRef = C8FF56732F3A385300E34D7C /* EFQRCode */; };
+		C8FF56792F3A3A6F00E34D7C /* PryntTrimmerView in Frameworks */ = {isa = PBXBuildFile; productRef = C8FF56782F3A3A6F00E34D7C /* PryntTrimmerView */; };
+		C8FF567C2F3A3D2000E34D7C /* QRCode in Frameworks */ = {isa = PBXBuildFile; productRef = C8FF567B2F3A3D2000E34D7C /* QRCode */; };
+		C8FF567F2F3A48A700E34D7C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C8FF567E2F3A48A700E34D7C /* Lottie */; };
+		C8FF56822F3A49E100E34D7C /* RSBarcodes_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = C8FF56812F3A49E100E34D7C /* RSBarcodes_Swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,15 +92,20 @@
 				C879B2E32F37C66C004822E9 /* FirebaseFunctionsCombine-Community in Frameworks */,
 				C879B2F32F37C66C004822E9 /* FirebaseStorageCombine-Community in Frameworks */,
 				C879B38D2F37D077004822E9 /* SwiftyStoreKit in Frameworks */,
+				C8FF567F2F3A48A700E34D7C /* Lottie in Frameworks */,
 				C879B2DB2F37C66C004822E9 /* FirebaseDatabase in Frameworks */,
 				C879B2F12F37C66C004822E9 /* FirebaseStorage in Frameworks */,
+				C8FF56792F3A3A6F00E34D7C /* PryntTrimmerView in Frameworks */,
 				C879B2EF2F37C66C004822E9 /* FirebaseRemoteConfig in Frameworks */,
 				C879B2C92F37C66C004822E9 /* FirebaseAnalytics in Frameworks */,
+				C8FF567C2F3A3D2000E34D7C /* QRCode in Frameworks */,
 				C87A5F032F38FBF000D09B3E /* Siren in Frameworks */,
 				C879B2EB2F37C66C004822E9 /* FirebaseMessaging in Frameworks */,
+				C8FF56742F3A385300E34D7C /* EFQRCode in Frameworks */,
 				C881B8D72F396AEC00254B76 /* Mantis in Frameworks */,
 				C879B2E92F37C66C004822E9 /* FirebaseMLModelDownloader in Frameworks */,
 				C879B2ED2F37C66C004822E9 /* FirebasePerformance in Frameworks */,
+				C8FF56822F3A49E100E34D7C /* RSBarcodes_Swift in Frameworks */,
 				C879B2D72F37C66C004822E9 /* FirebaseCore in Frameworks */,
 				C879B2CF2F37C66C004822E9 /* FirebaseAppCheck in Frameworks */,
 				C87A5F222F3903C800D09B3E /* SVProgressHUD in Frameworks */,
@@ -180,6 +190,11 @@
 				C87A5F212F3903C800D09B3E /* SVProgressHUD */,
 				C87A5F502F39083E00D09B3E /* SwiftyGif */,
 				C881B8D62F396AEC00254B76 /* Mantis */,
+				C8FF56732F3A385300E34D7C /* EFQRCode */,
+				C8FF56782F3A3A6F00E34D7C /* PryntTrimmerView */,
+				C8FF567B2F3A3D2000E34D7C /* QRCode */,
+				C8FF567E2F3A48A700E34D7C /* Lottie */,
+				C8FF56812F3A49E100E34D7C /* RSBarcodes_Swift */,
 			);
 			productName = NewQrMaker;
 			productReference = C860EACD2F36FE600009B258 /* NewQrMaker.app */;
@@ -220,6 +235,11 @@
 				C87A5F202F3903C800D09B3E /* XCRemoteSwiftPackageReference "SVProgressHUD" */,
 				C87A5F4F2F39083E00D09B3E /* XCRemoteSwiftPackageReference "SwiftyGif" */,
 				C881B8D52F396AEC00254B76 /* XCRemoteSwiftPackageReference "Mantis" */,
+				C8FF56722F3A385300E34D7C /* XCRemoteSwiftPackageReference "EFQRCode" */,
+				C8FF56772F3A3A6F00E34D7C /* XCRemoteSwiftPackageReference "PryntTrimmerView" */,
+				C8FF567A2F3A3D2000E34D7C /* XCRemoteSwiftPackageReference "qrcode" */,
+				C8FF567D2F3A48A700E34D7C /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				C8FF56802F3A49E100E34D7C /* XCRemoteSwiftPackageReference "RSBarcodes_Swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C860EACE2F36FE600009B258 /* Products */;
@@ -541,6 +561,46 @@
 				minimumVersion = 1.7.5;
 			};
 		};
+		C8FF56722F3A385300E34D7C /* XCRemoteSwiftPackageReference "EFQRCode" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/EFPrefix/EFQRCode.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.3;
+			};
+		};
+		C8FF56772F3A3A6F00E34D7C /* XCRemoteSwiftPackageReference "PryntTrimmerView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HHK1/PryntTrimmerView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.2;
+			};
+		};
+		C8FF567A2F3A3D2000E34D7C /* XCRemoteSwiftPackageReference "qrcode" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dagronf/qrcode.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 27.13.0;
+			};
+		};
+		C8FF567D2F3A48A700E34D7C /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.6.0;
+			};
+		};
+		C8FF56802F3A49E100E34D7C /* XCRemoteSwiftPackageReference "RSBarcodes_Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yeahdongcn/RSBarcodes_Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -708,6 +768,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C881B8D52F396AEC00254B76 /* XCRemoteSwiftPackageReference "Mantis" */;
 			productName = Mantis;
+		};
+		C8FF56732F3A385300E34D7C /* EFQRCode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8FF56722F3A385300E34D7C /* XCRemoteSwiftPackageReference "EFQRCode" */;
+			productName = EFQRCode;
+		};
+		C8FF56782F3A3A6F00E34D7C /* PryntTrimmerView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8FF56772F3A3A6F00E34D7C /* XCRemoteSwiftPackageReference "PryntTrimmerView" */;
+			productName = PryntTrimmerView;
+		};
+		C8FF567B2F3A3D2000E34D7C /* QRCode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8FF567A2F3A3D2000E34D7C /* XCRemoteSwiftPackageReference "qrcode" */;
+			productName = QRCode;
+		};
+		C8FF567E2F3A48A700E34D7C /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8FF567D2F3A48A700E34D7C /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		C8FF56812F3A49E100E34D7C /* RSBarcodes_Swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8FF56802F3A49E100E34D7C /* XCRemoteSwiftPackageReference "RSBarcodes_Swift" */;
+			productName = RSBarcodes_Swift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
