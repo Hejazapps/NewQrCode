@@ -259,8 +259,7 @@ extension TutotrialCell: UICollectionViewDataSource {
         } else {
             cell.proIcon.isHidden = true
             cell.proBtn.isHidden = true
-        } else {
-        }
+        } 
         
         if indexPath.row < 3 {
             cell.proIcon.isHidden = true
