@@ -49,3 +49,12 @@
 
 "Back" = "Back";
 
+
+"No Internet" = "No Internet";
+"internet_connection" = "Please check your internet connection";
+"ok" = "ok";
+
+
+"messageT" = "Your Custom Template will render here";
+"Create" = "Create";
+

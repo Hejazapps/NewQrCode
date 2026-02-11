@@ -38,7 +38,7 @@ class HomeVc: UIViewController {
     @IBOutlet weak var expandLabel: UILabel!
     @IBOutlet weak var heightForView: NSLayoutConstraint!
     @IBOutlet weak var collapseIcon: UIImageView!
-    var isExpand = true
+    var isExpand = false
     var selectedIndexPath: IndexPath?
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var bottomView: UIView!
@@ -95,7 +95,7 @@ class HomeVc: UIViewController {
         
         
         
-        expandLabel.text = "Collapse More".localize()
+        expandLabel.text = "Expand More".localize()
         
     }
     
