@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18A72C082F4032B900FB7D1C /* ZXingObjC in Frameworks */ = {isa = PBXBuildFile; productRef = 18A72C072F4032B900FB7D1C /* ZXingObjC */; };
 		C879B2C52F37C66C004822E9 /* FirebaseAI in Frameworks */ = {isa = PBXBuildFile; productRef = C879B2C42F37C66C004822E9 /* FirebaseAI */; };
 		C879B2C72F37C66C004822E9 /* FirebaseAILogic in Frameworks */ = {isa = PBXBuildFile; productRef = C879B2C62F37C66C004822E9 /* FirebaseAILogic */; };
 		C879B2C92F37C66C004822E9 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C879B2C82F37C66C004822E9 /* FirebaseAnalytics */; };
@@ -110,6 +111,7 @@
 				C879B2CF2F37C66C004822E9 /* FirebaseAppCheck in Frameworks */,
 				C87A5F222F3903C800D09B3E /* SVProgressHUD in Frameworks */,
 				C87A5F002F38FB9B00D09B3E /* Reachability in Frameworks */,
+				18A72C082F4032B900FB7D1C /* ZXingObjC in Frameworks */,
 				C879B2CB2F37C66C004822E9 /* FirebaseAnalyticsCore in Frameworks */,
 				C879B2E12F37C66C004822E9 /* FirebaseFunctions in Frameworks */,
 				C879B2D32F37C66C004822E9 /* FirebaseAuth in Frameworks */,
@@ -195,6 +197,7 @@
 				C8FF567B2F3A3D2000E34D7C /* QRCode */,
 				C8FF567E2F3A48A700E34D7C /* Lottie */,
 				C8FF56812F3A49E100E34D7C /* RSBarcodes_Swift */,
+				18A72C072F4032B900FB7D1C /* ZXingObjC */,
 			);
 			productName = NewQrMaker;
 			productReference = C860EACD2F36FE600009B258 /* NewQrMaker.app */;
@@ -240,6 +243,7 @@
 				C8FF567A2F3A3D2000E34D7C /* XCRemoteSwiftPackageReference "qrcode" */,
 				C8FF567D2F3A48A700E34D7C /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				C8FF56802F3A49E100E34D7C /* XCRemoteSwiftPackageReference "RSBarcodes_Swift" */,
+				18A72C062F4032B900FB7D1C /* XCRemoteSwiftPackageReference "ZXingObjC" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C860EACE2F36FE600009B258 /* Products */;
@@ -489,6 +493,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		18A72C062F4032B900FB7D1C /* XCRemoteSwiftPackageReference "ZXingObjC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rafsannazmul/ZXingObjC";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		C879B2C32F37C66C004822E9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -604,6 +616,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		18A72C072F4032B900FB7D1C /* ZXingObjC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18A72C062F4032B900FB7D1C /* XCRemoteSwiftPackageReference "ZXingObjC" */;
+			productName = ZXingObjC;
+		};
 		C879B2C42F37C66C004822E9 /* FirebaseAI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C879B2C32F37C66C004822E9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

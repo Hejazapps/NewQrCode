@@ -1,5 +1,5 @@
 {
-  "originHash" : "0620b50939403bcd727ceb695eef5a283f2b41cc5594b5519f4086be6f960cad",
+  "originHash" : "e196cb3db747b209cc0d658b8cfca3186a147e5980eddda843391186b9e16ef7",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -269,6 +269,15 @@
       "state" : {
         "revision" : "9ce911639680113dac9b554d6243e406a9758ebe",
         "version" : "0.16.4"
+      }
+    },
+    {
+      "identity" : "zxingobjc",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rafsannazmul/ZXingObjC",
+      "state" : {
+        "branch" : "main",
+        "revision" : "8880af4fb389daec9268d731d512d6b59f62e12c"
       }
     }
   ],
