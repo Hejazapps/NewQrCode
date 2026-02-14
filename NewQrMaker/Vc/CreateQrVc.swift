@@ -1289,19 +1289,19 @@ class CreateQrVc: UIViewController, sendIndex,CLLocationManagerDelegate, EKEvent
                 let image = BarCodeGenerator.getBarCodeImage(type: self.currentSelectedName, value: string!)
                 
                 if let value = image {
-                    self.dismiss(animated: true) {
-                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ShowResultVc") as! ShowResultVc
-                        vc.stringValue = string!
-                        vc.modalPresentationStyle = .fullScreen
-                        vc.image = image
-                        vc.isfromQr = false
-                        vc.currenttypeOfQrBAR = self.currentSelectedName
-                        
-                        
-                        
-                        
-                        UIApplication.topMostViewController?.transitionVc(vc: vc, duration: 0.4, type: .fromRight)
-                    }
+//                    self.dismiss(animated: true) {
+//                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ShowResultVc") as! ShowResultVc
+//                        vc.stringValue = string!
+//                        vc.modalPresentationStyle = .fullScreen
+//                        vc.image = image
+//                        vc.isfromQr = false
+//                        vc.currenttypeOfQrBAR = self.currentSelectedName
+//                        
+//                        
+//                        
+//                        
+//                        UIApplication.topMostViewController?.transitionVc(vc: vc, duration: 0.4, type: .fromRight)
+//                    }
                     
                     return
                     
