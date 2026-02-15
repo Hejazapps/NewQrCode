@@ -1743,16 +1743,19 @@ easy access later</string>
                                     <constraint firstItem="C9N-Gj-D5w" firstAttribute="centerX" secondItem="IZi-ku-7vu" secondAttribute="centerX" id="zPF-Dt-han"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pro Btn" translatesAutoresizingMaskIntoConstraints="NO" id="pAj-T3-rQb">
+                                <rect key="frame" x="279.66666666666669" y="49" width="117" height="72"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Typ-0i-cwP">
                                 <rect key="frame" x="293" y="65" width="90" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="Lhr-Gg-QjG"/>
                                     <constraint firstAttribute="height" constant="40" id="qMR-ef-c0L"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Create">
+                                <buttonConfiguration key="configuration" style="plain" title="   Create">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -1764,8 +1767,10 @@ easy access later</string>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="IjZ-qa-uyM" firstAttribute="centerX" secondItem="yzT-8D-85e" secondAttribute="centerX" id="1Dn-CY-Caq"/>
+                            <constraint firstItem="pAj-T3-rQb" firstAttribute="centerX" secondItem="Typ-0i-cwP" secondAttribute="centerX" id="A1l-5c-9jz"/>
                             <constraint firstItem="IjZ-qa-uyM" firstAttribute="width" secondItem="yzT-8D-85e" secondAttribute="width" id="A6S-fi-eg2"/>
                             <constraint firstAttribute="bottom" secondItem="RGQ-rf-MmF" secondAttribute="bottom" id="Aqd-Ki-kpK"/>
+                            <constraint firstItem="pAj-T3-rQb" firstAttribute="width" secondItem="Typ-0i-cwP" secondAttribute="width" multiplier="1.3" id="JJA-gy-SjH"/>
                             <constraint firstItem="XcS-bK-8aD" firstAttribute="centerY" secondItem="mOG-Lg-Dv9" secondAttribute="centerY" id="JPc-0a-DZ3"/>
                             <constraint firstItem="RGQ-rf-MmF" firstAttribute="top" secondItem="LtE-Aa-Gh6" secondAttribute="bottom" constant="10" id="Jgi-IL-M7U"/>
                             <constraint firstItem="LtE-Aa-Gh6" firstAttribute="top" secondItem="IZi-ku-7vu" secondAttribute="bottom" id="LEp-pc-XKg"/>
@@ -1781,6 +1786,7 @@ easy access later</string>
                             <constraint firstItem="mOG-Lg-Dv9" firstAttribute="top" secondItem="Zbh-4t-tDj" secondAttribute="top" constant="40" id="e71-H3-UWR"/>
                             <constraint firstItem="Typ-0i-cwP" firstAttribute="centerY" secondItem="IjZ-qa-uyM" secondAttribute="centerY" id="gt2-ws-wZx"/>
                             <constraint firstItem="yzT-8D-85e" firstAttribute="centerX" secondItem="Zbh-4t-tDj" secondAttribute="centerX" id="i23-HE-tu6"/>
+                            <constraint firstItem="pAj-T3-rQb" firstAttribute="centerY" secondItem="Typ-0i-cwP" secondAttribute="centerY" id="mj3-9r-hLO"/>
                             <constraint firstItem="IZi-ku-7vu" firstAttribute="top" secondItem="yzT-8D-85e" secondAttribute="bottom" constant="20" id="pQK-Vd-miP"/>
                             <constraint firstItem="LtE-Aa-Gh6" firstAttribute="leading" secondItem="Zbh-4t-tDj" secondAttribute="leading" id="qXY-zb-W84"/>
                             <constraint firstItem="15Y-r9-9Ko" firstAttribute="trailing" secondItem="IZi-ku-7vu" secondAttribute="trailing" id="uvt-nf-6vz"/>
@@ -1816,6 +1822,7 @@ easy access later</string>
         <image name="Frame 1000004146" width="293.33334350585938" height="48"/>
         <image name="Home" width="24" height="24"/>
         <image name="Nav_btn" width="122.66666412353516" height="72"/>
+        <image name="Pro Btn" width="185.33332824707031" height="72"/>
         <image name="Scan" width="25" height="25"/>
         <image name="Selected" width="30" height="30"/>
         <image name="Template" width="24" height="24"/>

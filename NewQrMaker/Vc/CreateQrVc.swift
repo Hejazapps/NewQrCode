@@ -290,7 +290,6 @@ class CreateQrVc: UIViewController, sendIndex,CLLocationManagerDelegate, EKEvent
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        create.applyBlurShadowWithCornerBtn(radius: 10.0)
     }
     
     private func setupMapInteraction() {
