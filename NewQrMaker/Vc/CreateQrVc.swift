@@ -274,7 +274,7 @@ class CreateQrVc: UIViewController, sendIndex,CLLocationManagerDelegate, EKEvent
         else {
             label.text = "Create QR Code".localize()
         }
-        create.setTitle("Create".localize(), for: .normal)
+        create.setTitle("  Create".localize(), for: .normal)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.gotoView()
