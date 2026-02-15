@@ -1581,7 +1581,7 @@ class CreateQrVc: UIViewController, sendIndex,CLLocationManagerDelegate, EKEvent
             
             
             
-            currentSelectedName = barCategoryArray[currentIndex.row * 6 + index] as! String
+            currentSelectedName = barCategoryArray[currentIndex.row * 8 + index] as! String
             inputParemeterArray = Constant.getInputParemeterByType(type: "BarCode")
             for _ in self.inputParemeterArray {
                 self.createDataModelArray.append(ResultDataModel(title: "Enter Code", description: ""))
@@ -1616,7 +1616,7 @@ class CreateQrVc: UIViewController, sendIndex,CLLocationManagerDelegate, EKEvent
                 return
             }
             
-            let index =   currentIndex.row*6 + index
+            let index =   currentIndex.row*8 + index
             print(itemName[index])
             
             currentSelectedName = itemName[index]  as! String
@@ -1630,7 +1630,7 @@ class CreateQrVc: UIViewController, sendIndex,CLLocationManagerDelegate, EKEvent
             }
             
             if (itemName[index] as! String)  == "Location" {
-                let locationIndex = currentIndex.row * 6 + index
+                let locationIndex = currentIndex.row * 8 + index
                 currentSelectedName = (itemName[locationIndex] as! String).localize()
                 
                 collectionViewForIcon.reloadData()
@@ -2142,6 +2142,8 @@ extension UIView {
         layer.shadowOffset = .zero
         layer.shadowRadius = 1
         layer.shouldRasterize = true
+        layer.cornerRadius = 10.0
+        
         layer.rasterizationScale = scale ? UIScreen.main.scale : 1
         if shouldShow {
             layer.borderWidth = 3.0
