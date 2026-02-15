@@ -288,6 +288,10 @@ class CreateQrVc: UIViewController, sendIndex,CLLocationManagerDelegate, EKEvent
     }
     
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        create.applyBlurShadowWithCornerBtn(radius: 10.0)
+    }
     
     private func setupMapInteraction() {
         mapView.delegate = self
@@ -1473,7 +1477,7 @@ class CreateQrVc: UIViewController, sendIndex,CLLocationManagerDelegate, EKEvent
         var height = 110
         
         if type.containsIgnoringCase(find: "text") || type.containsIgnoringCase(find: "Message") || type.containsIgnoringCase(find: "body") {
-            height = 400
+            height = 200
             
         }
         

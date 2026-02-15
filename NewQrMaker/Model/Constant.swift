@@ -883,13 +883,13 @@ extension Constant {
     static func getSMSParemeter() -> [CreateDataModel] {
         var array = [CreateDataModel]()
         array.append(CreateDataModel(title: "Phone Number:", height: 110))
-        array.append(CreateDataModel(title: "Message:", height: 400))
+        array.append(CreateDataModel(title: "Message:", height: 300))
         return array
     }
     
     static func getTextParemeter() -> [CreateDataModel] {
         var array = [CreateDataModel]()
-        array.append(CreateDataModel(title: "Enter Text:", height: 400))
+        array.append(CreateDataModel(title: "Enter Text:", height: 300))
         return array
     }
     

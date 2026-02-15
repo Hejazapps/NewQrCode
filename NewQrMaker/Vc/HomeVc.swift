@@ -71,8 +71,16 @@ class HomeVc: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         gradientimv.layer.cornerRadius = 20.0
-        gradientimv.clipsToBounds = true
-        proBtnHolder.applyBlurShadowWithCorner(radius: proBtnHolder.frame.size.height / 2.0)
+        proBtnHolder.applyBlurShadowWithCorner(radius: 24.0)
+    }
+    
+    
+    @IBAction func gotoQrPage(_ sender: Any) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "CreateQrVc") as!  CreateQrVc
+        vc.modalPresentationStyle = .fullScreen
+        transitionVc(vc: vc, duration: 0.4, type: .fromRight)
+        
     }
     
     func setUplabel() {
@@ -210,8 +218,7 @@ class HomeVc: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let gradientImage = createGradientImage(size: CGSize(width: 200, height: 200))
-        gradientimv.image = gradientImage
+      
         self.reigsterXib()
         self.getAllData()
         self.setUplabel()
@@ -502,6 +509,16 @@ extension UIView {
     }
 }
 
+extension UIButton {
+    func applyBlurShadowWithCornerBtn(radius: CGFloat = 8) {
+        layer.cornerRadius = radius
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.06
+        layer.shadowOffset = CGSize(width: 0, height: 4)
+        layer.shadowRadius = 1
+        layer.masksToBounds = false
+    }
+}
 extension UIViewController {
     
     func transitionVc(vc: UIViewController, duration: CFTimeInterval, type: CATransitionSubtype) {
