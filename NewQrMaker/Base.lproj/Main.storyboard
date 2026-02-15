@@ -1640,10 +1640,10 @@ easy access later</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LtE-Aa-Gh6">
-                                <rect key="frame" x="0.0" y="492" width="393" height="300"/>
+                                <rect key="frame" x="7" y="492" width="379" height="300"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Bsy-Yb-zzf">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="379" height="300"/>
                                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dyM-4T-Pyh">
                                             <size key="itemSize" width="128" height="128"/>
@@ -1777,7 +1777,7 @@ easy access later</string>
                             <constraint firstItem="IjZ-qa-uyM" firstAttribute="height" secondItem="yzT-8D-85e" secondAttribute="height" id="RP9-WK-J6B"/>
                             <constraint firstItem="15Y-r9-9Ko" firstAttribute="trailing" secondItem="Typ-0i-cwP" secondAttribute="trailing" constant="10" id="Xat-Tr-m49"/>
                             <constraint firstItem="IZi-ku-7vu" firstAttribute="top" secondItem="Typ-0i-cwP" secondAttribute="bottom" constant="30" id="ZhL-E5-Fen"/>
-                            <constraint firstItem="15Y-r9-9Ko" firstAttribute="trailing" secondItem="LtE-Aa-Gh6" secondAttribute="trailing" id="auP-ng-vRf"/>
+                            <constraint firstItem="15Y-r9-9Ko" firstAttribute="trailing" secondItem="LtE-Aa-Gh6" secondAttribute="trailing" constant="7" id="auP-ng-vRf"/>
                             <constraint firstItem="yzT-8D-85e" firstAttribute="centerY" secondItem="mOG-Lg-Dv9" secondAttribute="centerY" id="cBa-od-PyE"/>
                             <constraint firstItem="IZi-ku-7vu" firstAttribute="leading" secondItem="15Y-r9-9Ko" secondAttribute="leading" id="cZZ-V7-a6n"/>
                             <constraint firstItem="XcS-bK-8aD" firstAttribute="centerX" secondItem="mOG-Lg-Dv9" secondAttribute="centerX" id="crA-uC-rec"/>
@@ -1786,7 +1786,7 @@ easy access later</string>
                             <constraint firstItem="yzT-8D-85e" firstAttribute="centerX" secondItem="Zbh-4t-tDj" secondAttribute="centerX" id="i23-HE-tu6"/>
                             <constraint firstItem="pAj-T3-rQb" firstAttribute="centerY" secondItem="Typ-0i-cwP" secondAttribute="centerY" id="mj3-9r-hLO"/>
                             <constraint firstItem="IZi-ku-7vu" firstAttribute="top" secondItem="yzT-8D-85e" secondAttribute="bottom" constant="20" id="pQK-Vd-miP"/>
-                            <constraint firstItem="LtE-Aa-Gh6" firstAttribute="leading" secondItem="Zbh-4t-tDj" secondAttribute="leading" id="qXY-zb-W84"/>
+                            <constraint firstItem="LtE-Aa-Gh6" firstAttribute="leading" secondItem="Zbh-4t-tDj" secondAttribute="leading" constant="7" id="qXY-zb-W84"/>
                             <constraint firstItem="15Y-r9-9Ko" firstAttribute="trailing" secondItem="IZi-ku-7vu" secondAttribute="trailing" id="uvt-nf-6vz"/>
                             <constraint firstItem="IjZ-qa-uyM" firstAttribute="centerY" secondItem="yzT-8D-85e" secondAttribute="centerY" id="y9F-oo-3zN"/>
                             <constraint firstItem="RGQ-rf-MmF" firstAttribute="leading" secondItem="15Y-r9-9Ko" secondAttribute="leading" id="zgz-27-O1T"/>
@@ -1837,16 +1837,16 @@ easy access later</string>
         <image name="s" width="338" height="338"/>
         <image name="star 1" width="133.33332824707031" height="133.33332824707031"/>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.55294117647058827" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.53333333333333333" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

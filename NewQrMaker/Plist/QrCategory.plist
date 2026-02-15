@@ -13,39 +13,18 @@
 			<string>Wifi</string>
 			<string>Snapchat</string>
 			<string>Wechat</string>
-		</array>
-	</dict>
-	<dict>
-		<key>Category</key>
-		<string>Personal</string>
-		<key>items</key>
-		<array>
 			<string>Website</string>
 			<string>Vcard</string>
 			<string>MECARD</string>
 			<string>Phone Number</string>
 			<string>Sms</string>
 			<string>Email</string>
-		</array>
-	</dict>
-	<dict>
-		<key>Category</key>
-		<string>Search</string>
-		<key>items</key>
-		<array>
 			<string>App Store</string>
 			<string>Google Search</string>
 			<string>Yahoo</string>
 			<string>Bing Search</string>
 			<string>DuckDuck Go</string>
 			<string>TikTok</string>
-		</array>
-	</dict>
-	<dict>
-		<key>Category</key>
-		<string>Social Media</string>
-		<key>items</key>
-		<array>
 			<string>Facebook</string>
 			<string>Instagram</string>
 			<string>Twitter</string>
@@ -57,14 +36,6 @@
 			<string>Tumblr</string>
 			<string>Youtube</string>
 			<string>Youtube Video</string>
-			<string>Google Plus</string>
-		</array>
-	</dict>
-	<dict>
-		<key>Category</key>
-		<string>Cloud Storage</string>
-		<key>items</key>
-		<array>
 			<string>iCloud</string>
 			<string>Google Drive</string>
 			<string>Dropbox</string>

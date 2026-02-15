@@ -23,6 +23,10 @@ class IconViewColl: UICollectionViewCell {
     @IBOutlet weak var imv5: UIImageView!
     @IBOutlet weak var imv6: UIImageView!
     
+    @IBOutlet weak var imv7: UIImageView!
+    @IBOutlet weak var imv8: UIImageView!
+    
+    
     
     @IBOutlet weak var pro1: UIImageView!
     @IBOutlet weak var pro2: UIImageView!
@@ -31,6 +35,9 @@ class IconViewColl: UICollectionViewCell {
     @IBOutlet weak var pro5: UIImageView!
     @IBOutlet weak var pro6: UIImageView!
     
+    @IBOutlet weak var pro7: UIImageView!
+    @IBOutlet weak var pro8: UIImageView!
+    
     @IBOutlet weak var lbl1: UILabel!
     @IBOutlet weak var lbl2: UILabel!
     @IBOutlet weak var lbl3: UILabel!
@@ -38,12 +45,19 @@ class IconViewColl: UICollectionViewCell {
     @IBOutlet weak var lbl5: UILabel!
     @IBOutlet weak var lbl6: UILabel!
     
+    @IBOutlet weak var lbl7: UILabel!
+    @IBOutlet weak var lbl8: UILabel!
+    
     @IBOutlet weak var view1: UIView!
     @IBOutlet weak var view2: UIView!
     @IBOutlet weak var view3: UIView!
     @IBOutlet weak var view4: UIView!
     @IBOutlet weak var view5: UIView!
     @IBOutlet weak var view6: UIView!
+    
+    @IBOutlet weak var view7: UIView!
+    @IBOutlet weak var view8: UIView!
+    
     @IBOutlet weak var holderView: UIView!
     
     @IBOutlet weak var heightForImv: NSLayoutConstraint!
@@ -55,6 +69,9 @@ class IconViewColl: UICollectionViewCell {
     @IBOutlet weak var widthForLbl6: NSLayoutConstraint!
     @IBOutlet weak var widthForLbl5: NSLayoutConstraint!
     @IBOutlet weak var heightForBtn: NSLayoutConstraint!
+    
+    @IBOutlet weak var widthForLbl7: NSLayoutConstraint!
+    @IBOutlet weak var widthForLbl8: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()

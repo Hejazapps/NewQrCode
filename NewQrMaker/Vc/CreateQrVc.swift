@@ -1784,191 +1784,143 @@ extension CreateQrVc:UICollectionViewDelegate, UICollectionViewDataSource,UIColl
             for: indexPath) as? IconViewColl else {
             return IconViewColl()
         }
-        
-        cell.view1.dropShadow(shouldShow: false)
-        cell.view2.dropShadow( shouldShow: false)
-        cell.view3.dropShadow(shouldShow: false)
-        cell.view4.dropShadow( shouldShow: false)
-        cell.view5.dropShadow( shouldShow: false)
-        cell.view6.dropShadow( shouldShow: false)
-        
-        cell.widthForBtn.constant = cell.view1.frame.width
-        cell.heightForBtn.constant = cell.view1.frame.height
-        
-        
-        
-        
-        
-        cell.pro1.isHidden = true
-        cell.pro2.isHidden = true
-        cell.pro3.isHidden = true
-        cell.pro4.isHidden = true
-        cell.pro5.isHidden = true
-        cell.pro6.isHidden = true
-        
-        
-        if (!Store.sharedInstance.isActiveSubscription()) {
+
+        // MARK: - Reset Shadows
+        let views = [
+            cell.view1, cell.view2, cell.view3, cell.view4,
+            cell.view5, cell.view6, cell.view7, cell.view8
+        ]
+
+        for view in views {
+            view?.dropShadow(shouldShow: false)
+        }
+
+        // MARK: - Reset Pro Badges
+        let pros = [
+            cell.pro1, cell.pro2, cell.pro3, cell.pro4,
+            cell.pro5, cell.pro6, cell.pro7, cell.pro8
+        ]
+
+        for pro in pros {
+            pro?.isHidden = true
+        }
+
+        // MARK: - Subscription Logic
+        if !Store.sharedInstance.isActiveSubscription() {
             
             if !isfromQr {
                 
+                let index = indexPath.row * 8
                 
-                let index =   indexPath.row*6
-                if let v =  barCategoryArray[index] as? String {
+                if index < barCategoryArray.count,
+                   let v = barCategoryArray[index] as? String {
                     
-                    
-                    if(v.containsIgnoringCase(find: "ean-13")) {
+                    if v.containsIgnoringCase(find: "ean-13") {
                         cell.pro1.isHidden = true
-                    }
-                    else {
+                    } else {
                         cell.pro1.isHidden = false
                     }
                 }
                 
-                if !Store.sharedInstance.isActiveSubscription() {
-                    
-                    
-                    cell.pro2.isHidden = false
-                    cell.pro3.isHidden = false
-                    cell.pro4.isHidden = false
-                    cell.pro5.isHidden = false
-                    cell.pro6.isHidden = false
+                // Show PRO badge for others
+                for i in 1..<8 {
+                    pros[i]?.isHidden = false
                 }
             }
             
-            if  isfromQr  {
+            if isfromQr, currentIndex.section > 1 {
+                for pro in pros {
+                    pro?.isHidden = false
+                }
+            }
+        }
+
+        // MARK: - Data Binding
+
+        let labels = [
+            cell.lbl1, cell.lbl2, cell.lbl3, cell.lbl4,
+            cell.lbl5, cell.lbl6, cell.lbl7, cell.lbl8
+        ]
+
+        let images = [
+            cell.imv1, cell.imv2, cell.imv3, cell.imv4,
+            cell.imv5, cell.imv6, cell.imv7, cell.imv8
+        ]
+
+        let startIndex = indexPath.row * 8
+
+        if isfromQr,
+           let dic = qrCategoryArray[indexPath.section] as? [String: Any],
+           let items = dic["items"] as? [String] {
+            
+            for i in 0..<8 {
+                let currentIndex = startIndex + i
                 
-                
-                if currentIndex.section > 1 {
-                    
-                    if(!Store.sharedInstance.isActiveSubscription()) {
-                        
-                        cell.pro1.isHidden = false
-                        cell.pro2.isHidden = false
-                        cell.pro3.isHidden = false
-                        cell.pro4.isHidden = false
-                        cell.pro5.isHidden = false
-                        cell.pro6.isHidden = false
-                    }
-                    
+                if currentIndex < items.count {
+                    let text = items[currentIndex]
+                    labels[i]?.text = text.localize()
+                    images[i]?.image = UIImage(named: text)
+                } else {
+                    labels[i]?.text = ""
+                    images[i]?.image = nil
                 }
             }
             
-        }
-        
-        
-        let dic = qrCategoryArray[indexPath.section] as? Dictionary<String, Any>
-        
-        if isfromQr {
+        } else {
             
-            if let  itemName  = dic!["items"] as? NSArray {
+            for i in 0..<8 {
+                let currentIndex = startIndex + i
                 
-                let index =   indexPath.row*6
-                cell.lbl1.text = itemName[index] as? String
-                cell.lbl1.text =  cell.lbl1.text?.localize()
-                cell.lbl2.text = itemName[index + 1] as? String
-                cell.lbl2.text =  cell.lbl2.text?.localize()
-                cell.lbl3.text = itemName[index + 2] as? String
-                cell.lbl3.text =  cell.lbl3.text?.localize()
-                cell.lbl4.text = itemName[index + 3] as? String
-                cell.lbl4.text =  cell.lbl4.text?.localize()
-                cell.lbl5.text = itemName[index + 4] as? String
-                cell.lbl5.text =  cell.lbl5.text?.localize()
-                cell.lbl6.text = itemName[index + 5] as? String
-                cell.lbl6.text =  cell.lbl6.text?.localize()
-                cell.imv1.image = UIImage(named: (itemName[index] as? String)!)
-                cell.imv2.image = UIImage(named: (itemName[index + 1] as? String)!)
-                cell.imv3.image = UIImage(named: (itemName[index + 2] as? String)!)
-                cell.imv4.image = UIImage(named: (itemName[index + 3] as? String)!)
-                cell.imv5.image = UIImage(named: (itemName[index + 4] as? String)!)
-                cell.imv6.image = UIImage(named: (itemName[index + 5] as? String)!)
-                print(cell.lbl5.text)
+                if currentIndex < barCategoryArray.count,
+                   let text = barCategoryArray[currentIndex] as? String {
+                    
+                    labels[i]?.text = text.localize()
+                    images[i]?.image = UIImage(named: text)
+                    
+                } else {
+                    labels[i]?.text = ""
+                    images[i]?.image = nil
+                }
             }
         }
-        else {
-            let index =   indexPath.row*6
-            cell.lbl1.text = barCategoryArray[index] as? String
-            cell.lbl1.text =  cell.lbl1.text?.localize()
-            cell.lbl2.text = barCategoryArray[index + 1] as? String
-            cell.lbl2.text =  cell.lbl2.text?.localize()
-            cell.lbl3.text = barCategoryArray[index + 2] as? String
-            cell.lbl3.text =  cell.lbl3.text?.localize()
-            cell.lbl4.text = barCategoryArray[index + 3] as? String
-            cell.lbl4.text =  cell.lbl4.text?.localize()
-            cell.lbl5.text = barCategoryArray[index + 4] as? String
-            cell.lbl5.text =  cell.lbl5.text?.localize()
-            cell.lbl6.text = barCategoryArray[index + 5] as? String
-            cell.lbl6.text =  cell.lbl6.text?.localize()
-            
-            cell.imv1.image = UIImage(named: ( barCategoryArray[index] as? String)!)
-            cell.imv2.image = UIImage(named: (barCategoryArray[index + 1] as? String)!)
-            cell.imv3.image = UIImage(named: (barCategoryArray[index + 2] as? String)!)
-            cell.imv4.image = UIImage(named: (barCategoryArray[index + 3] as? String)!)
-            cell.imv5.image = UIImage(named: (barCategoryArray[index + 4] as? String)!)
-            cell.imv6.image = UIImage(named: (barCategoryArray[index + 5] as? String)!)
-            print(cell.lbl5.text)
+
+        // MARK: - Hide Empty Views Automatically
+        for i in 0..<8 {
+            let text = labels[i]?.text ?? ""
+            views[i]?.isHidden = text.isEmpty
         }
-        
-        
-        
-        
-        
-        print("your cat is \(barCategoryArray[0] as? String)")
-        
-        if cell.lbl1.text == currentSelectedName {
-            cell.view1.dropShadow(shouldShow: true)
-            
+
+        // MARK: - Highlight Selected
+        for i in 0..<8 {
+            if labels[i]?.text == currentSelectedName {
+                views[i]?.dropShadow(shouldShow: true)
+            }
         }
-        if cell.lbl2.text == currentSelectedName {
-            cell.view2.dropShadow(shouldShow: true)
-            
-        }
-        if cell.lbl3.text == currentSelectedName {
-            cell.view3.dropShadow(shouldShow: true)
-            
-        }
-        if cell.lbl4.text == currentSelectedName {
-            cell.view4.dropShadow(shouldShow: true)
-            
-        }
-        if cell.lbl5.text == currentSelectedName {
-            cell.view5.dropShadow(shouldShow: true)
-            
-        }
-        if cell.lbl6.text == currentSelectedName {
-            cell.view6.dropShadow(shouldShow: true)
-            
-        }
-        
-        cell.heightForImv.constant = cell.holderView.frame.height - 2*10
-        
-        if cell.lbl6.text!.count < 1 {
-            cell.view6.isHidden = true
-        }
-        else {
-            cell.view6.isHidden = false
-        }
-        
-        if cell.lbl5.text!.count < 1 {
-            cell.view5.isHidden = true
-        }
-        else {
-            cell.view5.isHidden = false
-        }
-        
+
+        // MARK: - Layout Updates
+        cell.widthForBtn.constant = cell.view1.frame.width
+        cell.heightForBtn.constant = cell.view1.frame.height
+
+        cell.heightForImv.constant = 45
+
         cell.widthForLbl1.constant = cell.view1.frame.width
         cell.widthForLbl2.constant = cell.view2.frame.width
         cell.widthForlbl3.constant = cell.view3.frame.width
         cell.widthForlbl4.constant = cell.view4.frame.width
         cell.widthForLbl5.constant = cell.view5.frame.width
         cell.widthForLbl6.constant = cell.view6.frame.width
+        cell.widthForLbl7.constant = cell.view7.frame.width
+        cell.widthForLbl8.constant = cell.view8.frame.width
+
         cell.delegateForbtnTag = self
+
         return cell
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: self.view.frame.width, height: 290)
+        return CGSize(width: self.view.frame.width - 2 * 7, height: 290)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat{
@@ -1997,7 +1949,7 @@ extension CreateQrVc:UICollectionViewDelegate, UICollectionViewDataSource,UIColl
         let dic = qrCategoryArray[section] as? Dictionary<String, Any>
         
         if let  itemName  = dic!["items"] as? NSArray {
-            return itemName.count / 6
+            return  max(itemName.count / 8,1)
             
         }
         return 1
