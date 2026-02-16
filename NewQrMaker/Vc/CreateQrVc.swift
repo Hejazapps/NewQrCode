@@ -208,6 +208,7 @@ class CreateQrVc: UIViewController, sendIndex,CLLocationManagerDelegate, EKEvent
         barCategoryArray = NSArray(contentsOfFile: path2!)
         
         
+        create.titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .medium)
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardWillHide),
@@ -221,7 +222,7 @@ class CreateQrVc: UIViewController, sendIndex,CLLocationManagerDelegate, EKEvent
             object: nil
         )
         if isfromQr {
-            progressBar.setPercentage(20)
+            progressBar.setPercentage(25)
         }
         else {
             progressBar.setPercentage(50)
@@ -275,6 +276,14 @@ class CreateQrVc: UIViewController, sendIndex,CLLocationManagerDelegate, EKEvent
             label.text = "Create QR Code".localize()
         }
         create.setTitle("  Create".localize(), for: .normal)
+        
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.systemFont(ofSize: 13, weight: .medium)
+        ]
+
+        let attributedTitle = NSAttributedString(string: "  " + "Create".localize(), attributes: attributes)
+        create.setAttributedTitle(attributedTitle, for: .normal)
+        
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.gotoView()
@@ -1505,7 +1514,7 @@ class CreateQrVc: UIViewController, sendIndex,CLLocationManagerDelegate, EKEvent
         print("Current Page lol: \(currentPage)")
         currentPage = currentPage + 1
         if isfromQr {
-            progressBar.setPercentage(CGFloat(20 * currentPage))
+            progressBar.setPercentage(CGFloat(25 * currentPage))
         }
         else {
             progressBar.setPercentage(CGFloat(50 * currentPage))
@@ -1559,104 +1568,179 @@ class CreateQrVc: UIViewController, sendIndex,CLLocationManagerDelegate, EKEvent
     }
     
     func btnTag(index: Int) {
-        //conactBtn.isHidden = true
+        
+        print("[checker] ===== btnTag START =====")
+        print("[checker] tapped index = \(index)")
+        print("[checker] currentIndex.row = \(currentIndex.row)")
+        print("[checker] currentIndex.section = \(currentIndex.section)")
+        print("[checker] isfromQr = \(isfromQr)")
+        
         selectedIndex = index
         shouldShowContact = false
         
         dismissKeyboard()
+        print("[checker] Keyboard dismissed")
+        
         inputParemeterArray.removeAll()
         createDataModelArray.removeAll()
+        print("[checker] Cleared inputParemeterArray & createDataModelArray")
+        
         mapView.isHidden = true
+        print("[checker] mapView hidden")
         
         hideSearchBar()
         instructionLabel?.removeFromSuperview()
+        print("[checker] SearchBar hidden & instructionLabel removed")
         
         self.currentTextView.text = ""
         
+        // ==========================
+        // BARCODE FLOW
+        // ==========================
         if !isfromQr {
             
+            print("[checker] Entering BARCODE flow")
+            
             currentBrCode = index
-            print("muntasir = \(currentIndex.row)")
-            print("muntasir1 = \(currentIndex.section)")
             
+            let calculatedIndex = currentIndex.row * 8 + index
+            print("[checker] Calculated barCategory index = \(calculatedIndex)")
+            print("[checker] barCategoryArray count = \(barCategoryArray.count)")
             
-            
-            currentSelectedName = barCategoryArray[currentIndex.row * 8 + index] as! String
-            inputParemeterArray = Constant.getInputParemeterByType(type: "BarCode")
-            for _ in self.inputParemeterArray {
-                self.createDataModelArray.append(ResultDataModel(title: "Enter Code", description: ""))
+            if calculatedIndex < barCategoryArray.count {
+                currentSelectedName = barCategoryArray[calculatedIndex] as! String
+                print("[checker] Selected Name = \(currentSelectedName)")
+            } else {
+                print("[checker] ❌ Index out of range in barCategoryArray")
+                return
             }
+            
+            inputParemeterArray = Constant.getInputParemeterByType(type: "BarCode")
+            print("[checker] inputParemeterArray count = \(inputParemeterArray.count)")
+            
+            for _ in self.inputParemeterArray {
+                self.createDataModelArray.append(
+                    ResultDataModel(title: "Enter Code", description: "")
+                )
+            }
+            
+            print("[checker] createDataModelArray count = \(createDataModelArray.count)")
+            
             collectionViewForIcon.reloadData()
             tableView.reloadData()
+            
+            print("[checker] Reloaded collectionViewForIcon & tableView")
+            print("[checker] ===== btnTag END (BARCODE) =====")
             return
         }
         
+        // ==========================
+        // QR FLOW
+        // ==========================
         
+        print("[checker] Entering QR flow")
+        print("[checker] qrCategoryArray count = \(qrCategoryArray.count)")
         
-        print(currentIndex.row)
-        print(currentIndex.section)
-        
-        print("muntasir = \(currentIndex.row)")
-        print("muntasir1 = \(currentIndex.section)")
-        
-        
+        guard currentIndex.section < qrCategoryArray.count else {
+            print("[checker] ❌ currentIndex.section out of range")
+            return
+        }
         
         let dic = qrCategoryArray[currentIndex.section] as? Dictionary<String, Any>
-        if let  itemName  = dic!["items"] as? NSArray {
+        print("[checker] Dictionary fetched from qrCategoryArray")
+        
+        if let itemName = dic?["items"] as? NSArray {
             
+            print("[checker] itemName count = \(itemName.count)")
             
-            if (itemName[index] as! String)  == "Event" {
+            if currentIndex.row * 8 + index < itemName.count,
+               (itemName[currentIndex.row * 8 + index] as? String) == "Event" {
+                
+                print("[checker] Event selected")
                 
                 isFromEvnt = true
                 self.createDataModelArray.removeAll()
                 self.inputParemeterArray.removeAll()
+                
+                print("[checker] Cleared arrays for Event")
+                
                 self.addEventToCalendar()
-                self.collectionViewForIcon.reloadData()
+                
+                collectionViewForIcon.reloadData()
                 tableView.reloadData()
+                
+                print("[checker] Reloaded UI after Event")
+                print("[checker] ===== btnTag END (EVENT) =====")
                 return
             }
             
-            let index =   currentIndex.row*8 + index
-            print(itemName[index])
+            let calculatedIndex = currentIndex.row * 8 + index
+            print("[checker] Calculated QR index = \(calculatedIndex)")
             
-            currentSelectedName = itemName[index]  as! String
+            if calculatedIndex >= itemName.count {
+                print("[checker] ❌ QR calculated index out of range")
+                return
+            }
+            
+            print("[checker] Selected item = \(itemName[calculatedIndex])")
+            
+            currentSelectedName = itemName[calculatedIndex] as! String
             createDataModelArray.removeAll()
             
             tableView.isHidden = false
             mapView.isHidden = true
             
-            if (itemName[index] as! String).containsIgnoringCase(find: "vcard") {
+            if currentSelectedName.containsIgnoringCase(find: "vcard") {
                 shouldShowContact = true
+                print("[checker] shouldShowContact = true (vCard detected)")
             }
             
-            if (itemName[index] as! String)  == "Location" {
-                let locationIndex = currentIndex.row * 8 + index
-                currentSelectedName = (itemName[locationIndex] as! String).localize()
+            if currentSelectedName == "Location" {
+                
+                print("[checker] Location selected")
+                
+                currentSelectedName = currentSelectedName.localize()
                 
                 collectionViewForIcon.reloadData()
                 showLocationInputAlert()
+                
+                print("[checker] Location alert shown")
+                print("[checker] ===== btnTag END (LOCATION) =====")
                 return
             }
             
-            inputParemeterArray = Constant.getInputParemeterByType(type: itemName[index] as! String)
+            inputParemeterArray = Constant.getInputParemeterByType(type: currentSelectedName)
+            print("[checker] inputParemeterArray count = \(inputParemeterArray.count)")
+            
             for v in self.inputParemeterArray {
                 if v.text.count > 0 {
-                    self.createDataModelArray.append(ResultDataModel(title: v.title, description: v.text))
-                    
+                    print("[checker] Adding prefilled value for \(v.title)")
+                    self.createDataModelArray.append(
+                        ResultDataModel(title: v.title, description: v.text)
+                    )
+                } else {
+                    print("[checker] Adding empty value for \(v.title)")
+                    self.createDataModelArray.append(
+                        ResultDataModel(title: v.title, description: "")
+                    )
                 }
-                else {
-                    self.createDataModelArray.append(ResultDataModel(title: v.title, description: ""))
-                }
-                
             }
             
+            print("[checker] createDataModelArray count = \(createDataModelArray.count)")
         }
+        
         tableView.reloadData()
         collectionViewForIcon.reloadData()
+        
+        print("[checker] Reloaded UI")
+        
         self.dismissKeyboard()
         isFromEvnt = false
-        //self.currentTextView.becomeFirstResponder()
+        
+        print("[checker] isFromEvnt reset to false")
+        print("[checker] ===== btnTag END =====")
     }
+
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         

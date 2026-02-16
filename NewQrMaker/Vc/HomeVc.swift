@@ -30,6 +30,8 @@ class HomeVc: UIViewController {
     var totalCategory = [String]()
     var parsedTemplate: [String: [Dictionary<String,String>]] = [:]
     
+    @IBOutlet weak var rightView: CustomView!
+    @IBOutlet weak var leftView: CustomView!
     var ref: DatabaseReference!
     var trendingData: [[String: String]] = []
     var savedDictionaries: [[String: String]] = []
@@ -71,7 +73,7 @@ class HomeVc: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         gradientimv.layer.cornerRadius = 20.0
-        proBtnHolder.applyBlurShadowWithCorner(radius: 24.0)
+        
     }
     
     
@@ -97,7 +99,7 @@ class HomeVc: UIViewController {
         bld.text = "Bar Code".localize()
         
         hlabel.text = "Home".localize()
-        prolabel.text = "Pro".localize()
+       
         
         tlabel.text = "Trending".localize()
         viewAll.text = "View All".localize()
@@ -223,6 +225,7 @@ class HomeVc: UIViewController {
         self.getAllData()
         self.setUplabel()
         
+ 
         
     }
     

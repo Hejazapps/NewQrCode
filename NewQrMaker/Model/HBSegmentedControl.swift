@@ -89,7 +89,6 @@ import UIKit
         
         addIndividualItemConstraints(labels, mainView: self)
     }
-    
     public override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -99,9 +98,30 @@ import UIKit
             thumbView.frame = label.frame
             thumbView.backgroundColor = thumbColor
             thumbView.layer.cornerRadius = thumbView.frame.height / 2
+            
+            // ✅ Add shadow here
+            addThumbShadow()
+            
             displayNewSelectedIndex()
         }
     }
+    
+    private func addThumbShadow() {
+        // Shadow properties
+        thumbView.layer.shadowColor = UIColor.black.cgColor
+        thumbView.layer.shadowOpacity = 0.2
+        thumbView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        thumbView.layer.shadowRadius = 4
+        thumbView.layer.masksToBounds = false
+        
+        // Optional: improve performance and match corner radius
+        thumbView.layer.shadowPath = UIBezierPath(
+            roundedRect: thumbView.bounds,
+            cornerRadius: thumbView.layer.cornerRadius
+        ).cgPath
+    }
+    
+    
     
     public override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         let location = touch.location(in: self)
