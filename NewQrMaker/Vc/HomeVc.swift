@@ -76,6 +76,14 @@ class HomeVc: UIViewController {
         
     }
     
+    @IBAction func gotoBarCode(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "CreateQrVc") as!  CreateQrVc
+        vc.modalPresentationStyle = .fullScreen
+        vc.isfromQr = false
+        
+        transitionVc(vc: vc, duration: 0.4, type: .fromRight)
+        
+    }
     
     @IBAction func gotoQrPage(_ sender: Any) {
         
@@ -331,6 +339,8 @@ class CustomView: UIView {
         }
     }
     
+   
+  
     // Update border dynamically
     func updateBorder(color: UIColor, width: CGFloat? = nil, radius: CGFloat? = nil) {
         layer.borderColor = color.cgColor

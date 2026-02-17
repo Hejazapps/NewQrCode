@@ -1,60 +1,300 @@
+// --- Navigation & Core UI ---
 "Home" = "Home";
 "Template" = "Template";
 "Scan" = "Scan";
 "Draft" = "Draft";
 "Settings" = "Settings";
-
 "Expand More" = "Expand More";
 "Collapse More" = "Collapse More";
 "Create Template" = "Create Template";
 "Batch Scan" = "Batch Scan";
-
 "Create Gif" = "Create Gif";
-
-"Create Vcard" =  "Create Vcard";
-
+"Create Vcard" = "Create Vcard";
 "Decorate QR Code" = "Decorate QR Code";
-
 "Create AI QR" = "Create AI QR";
-
 "Create" = "Create";
 "Qr Code" = "Qr Code";
 "Bar Code" = "Bar Code";
 "Pro" = "Pro";
 "Trending" = "Trending";
 "View All" = "View All";
-
 "Customized" = "Customized";
-
 "Gif" = "Gif";
+"Back" = "Back";
+"Done" = "Done";
+"Next" = "Next";
+"Finish" = "Finish";
+"Cancel" = "Cancel";
+"Save" = "Save";
+"Edit" = "Edit";
+"Preview" = "Preview";
+"Continue" = "Continue";
+"Go To Settings" = "Go To Settings";
 
-
+// --- Categories ---
 "Business" = "Business";
 "Love" = "Love";
 "Wifi" = "Wifi";
 "Event" = "Event";
 "Holiday" = "Holiday";
-"Trending" = "Trending";
 "Social Media" = "Social Media";
+"Explore Templates" = "Explore Templates";
 
-
-"Customized" = "Customized";
-"Gif" = "Gif";
-
-
+// --- Favorites & Empty States ---
 "fav_text" = "Your favourites will appear here";
 "fave_subtext" = "Save your most-used QR templates for easy access later";
 "Favourite" = "Favourite";
-"Explore" = "Explore Templates";
+"No_Scans_Yet" = "No Scans Yet";
+"No_created_code_Yet" = "No created code Yet";
+"messageT" = "Your Custom Template will render here";
 
-"Back" = "Back";
+// --- App Settings & Actions ---
+"Sound" = "Sound";
+"Vibrate" = "Vibrate";
+"History" = "History";
+"Link Open" = "Link Open";
+"Share this app" = "Share this app";
+"Rate this app" = "Rate this app";
+"Contact us" = "Contact us";
+"Terms of Use" = "Terms of Use";
+"Privacy Policy" = "Privacy Policy";
+"Sound when you scan codes" = "Sound when you scan codes";
+"Vibrate if scan is successful" = "Vibrate if scan is successful";
+"Save history of your scans" = "Save history of your scans";
+"Automatically Open if scan is successful" = "Automatically Open if scan is successful";
+"APP SETTING" = "APP SETTING";
+"OTHER" = "OTHER";
 
+// --- Subscription & Pro Features ---
+"Purchase" = "Purchase";
+"Restore" = "Restore";
+"Unlimited Templates" = "Unlimited Templates";
+"Unlimited CSV Exports & Folders" = "Unlimited CSV Exports & Folders";
+"Exclusive Qr Code Design" = "Exclusive Qr Code Design";
+"Scan Qr Codes & Bar Codes" = "Scan Qr Codes & Bar Codes";
+"Qr Codes with Custom Designs" = "Qr Codes with Custom Designs";
+"Weekly Plan" = "Weekly Plan";
+"Monthly Plan" = "Monthly Plan";
+"Yearly Plan" = "Yearly Plan";
+"Cancel Message" = "Subscription is auto renewable, Cancel anytime";
+"week" = "week";
+"month" = "month";
+"year" = "year";
+"without_free" = "Without Free";
+"Most Popular" = "Most Popular";
+"manage_subscriptions" = "Manage Subscriptions";
+"days free" = "days free";
+"per_week" = "per week";
+"OFF" = "OFF";
+"Unlock_All_Features" = "Unlock All Features";
+"Lifetime_Access" = "Lifetime Access";
+"Best_Value" = "Best Value";
+"One_time_payment" = "One-time payment";
+"Purchased" = "Purchased";
+"RestoreD" = "Restore Purchase Done";
+"NOTHING_TO_RESTORE" = "Nothing to Restore";
 
+// --- Social Media & Platforms ---
+"Facebook" = "Facebook";
+"Instagram" = "Instagram";
+"Twitter" = "Twitter";
+"LinkedIn" = "LinkedIn";
+"Skype" = "Skype";
+"Viber" = "Viber";
+"WhatsApp" = "WhatsApp";
+"Pinterest" = "Pinterest";
+"Tumblr" = "Tumblr";
+"YouTube" = "YouTube";
+"YouTube Video" = "YouTube Video";
+"Google Plus" = "Google Plus";
+"App Store" = "App Store";
+"Google Search" = "Google Search";
+"Yahoo" = "Yahoo";
+"Bing Search" = "Bing Search";
+"DuckDuck Go" = "DuckDuck Go";
+"TikTok" = "TikTok";
+"Snapchat" = "Snapchat";
+"Wechat" = "Wechat";
+
+// --- Cloud & Storage ---
+"iCloud" = "iCloud";
+"Google Drive" = "Google Drive";
+"Dropbox" = "Dropbox";
+"Box" = "Box";
+"One Drive" = "One Drive";
+"Flickr" = "Flickr";
+
+// --- Data Types & Fields ---
+"Website" = "Website";
+"Vcard" = "Vcard";
+"MECARD" = "MECARD";
+"Phone Number" = "Phone Number";
+"Sms" = "Sms";
+"Email" = "Email";
+"Text" = "Text";
+"Location" = "Location";
+"Link:" = "Link:";
+"First Name:" = "First Name:";
+"Last Name:" = "Last Name:";
+"Organization:" = "Organization:";
+"Job Title" = "Job Title";
+"Street:" = "Street:";
+"City:" = "City:";
+"State" = "State";
+"Country" = "Country";
+"Postal Code:" = "Postal Code:";
+"NickName:" = "NickName";
+"Address:" = "Address";
+"Note:" = "Note:";
+"Birthday" = "Birthday";
+"CC:" = "CC";
+"Subject:" = "Subject";
+"Email Body:" = "Email Body";
+"Twitter ID:" = "TWITTER ID";
+"Enter number:" = "Enter number:";
+"YouTube link:" = "YouTube link:";
+"Enter YouTube ID:" = "Enter YouTube ID:";
+"Enter fields:" = "Enter fields:";
+"App Store App Link:" = "App Store App Link:";
+"Icloud Link:" = "Icloud Link:";
+"Enter link" = "Enter link";
+"Enter search item:" = "Enter search item:";
+"Instagram ID:" = "Instagram ID:";
+"Skype ID:" = "Skype ID:";
+"Facebook Link:" = "Facebook Link:";
+"Linkedin ID:" = "Linkedin ID:";
+"Enter profile link" = "Enter profile link";
+"Enter Text:" = "Enter Text:";
+"Network Name:" = "Network Name:";
+"Password:" = "Password:";
+"Encription:" = "Encription:";
+"Mobile:" = "Mobile:";
+"Fax:" = "Fax：";
+"Zip" = "Zip";
+"Company:" = "Company:";
+"Your job:" = "Your job:";
+"Enter Code:" = "Enter Code:";
+
+// --- Barcode Formats ---
+"EAN-13" = "EAN-13";
+"EAN-8" = "EAN-8";
+"UPC-A" = "UPC-A";
+"UPC-E" = "UPC-E";
+"Code 39" = "Code 39";
+"Code 128" = "Code 128";
+"ITF" = "ITF";
+"Data Matrix" = "Data Matrix";
+"Aztec" = "Aztec";
+"PDF417" = "PDF417";
+
+// --- Barcode Constraints ---
+"12 digits and 1 check digit" = "12 digits and 1 check digit";
+"7 digits and 1 check digit" = "7 digits and 1 check digit";
+"11 digits and 1 check digit" = "11 digits and 1 check digit";
+"Only A-Z, digits, -, ., space, $, /, +, %, *" = "Only A-Z, digits, -, ., space, $, /, +, %, *";
+"Text, no special characters" = "Text, no special characters";
+"Numeric, alphanumeric and binary Data" = "Numeric, alphanumeric and binary Data";
+"Alphanumeric characters & digits" = "Alphanumeric characters & digits";
+"Numeric and alphanumeric characters, binary data, and special characters." = "Numeric and alphanumeric characters, binary data, and special characters.";
+
+// --- Design & Customization ---
+"Design" = "Design";
+"Content" = "Content";
+"Position maker" = "Position maker";
+"Body Shape" = "Body Shape";
+"Logo" = "Logo";
+"Forground Color" = "Forground Color";
+"BackGround Color" = "BackGround Color";
+"Camera & Gallery" = "Camera & Gallery";
+"Pupil" = "Pupil";
+"Pixel Color" = "Pixel Color";
+"Gradient" = "Gradient";
+"Eye" = "Eye";
+"On Pixel" = "On Pixel";
+"Choose Your First Color" = "Choose Your First Color";
+"Choose Your Second Color" = "Choose Your Second Color";
+"Emoji" = "Emoji";
+"Add Gradient" = "Add Gradient";
+"make_mess" = "Make Your Own Gradient";
+"Add Photo" = "Add Photo";
+"Crop" = "Crop";
+"Filter" = "Filter";
+"Overlay" = "Overlay";
+"Shape" = "Shape";
+"Graphics" = "Graphics";
+"Adjust" = "Adjust";
+"Quotes" = "Quotes";
+"Image" = "Image";
+"Frames" = "Frames";
+"Background" = "Background";
+"Keyboard" = "Keyboard";
+"Font" = "Font";
+"Align" = "Align";
+"Shadow" = "Shadow";
+"Color" = "Color";
+"Texture" = "Texture";
+"Pattern" = "Pattern";
+"BG" = "BG";
+"offset" = "offset";
+"opacity" = "opacity";
+"radius" = "radius";
+
+// --- History & File Management ---
+"CREATED" = "CREATED";
+"SCANNED" = "SCANNED";
+"enterfoldername" = "Enter folder name";
+"Foldernameempty" = "Folder name is empty!";
+"FolderNameExists" = "Folder name exists Already!";
+"moveFilesToFolderPrompt" = "Do you want to move the selected files to folder?";
+"noFileSelected" = "No file has been selected!";
+"CODES" = "CODES";
+"Delete" = "Delete";
+"Export" = "Export";
+"MOVE" = "Move";
+"delete_file_confirmation" = "Do you want to delete the file?";
+"no_folder_selected" = "No folder has been selected!";
+
+// --- Alerts & Errors ---
 "No Internet" = "No Internet";
 "internet_connection" = "Please check your internet connection";
-"ok" = "ok";
+"ok" = "Ok";
+"Invalid Code!" = "Invalid Code!";
+"Note" = "Note";
+"Warning" = "Warning";
+"Alert" = "Alert";
+"Error" = "Error";
+"Enter_f" = "Enter fields properly.";
+"Can not Detect Any Code!" = "Can not Detect Any Code!";
+"Failedcard" = "Failed to create Vcard";
+"access_to_contacts_denied" = "Access to Contacts Denied";
+"grant_contacts_access_message" = "Please grant access to your contacts in Settings to use this feature.";
+"failed_to_fetch_contacts_message" = "Failed to fetch contacts. Please try again later.";
+"email_not_configured" = "Email is not configured!";
+"photos_access_required" = "Photos Access required";
+"scan_codes_from_images_photos_access_required" = "To scan codes from images the app needs Photos access";
+"allow_access" = "Allow Access";
 
+// --- Rating & Reviews ---
+"rating_message" = "Hello there. It’s just us building this app. If you found our app useful for you please give us a good rating. It will help us to grow. We will reach out to you. Thanks";
+"rate_title" = "If you enjoy using QRMAKER App, would you mind taking a moment to rate it? It won't take more than a minute. Thanks for your support!";
+"new_rate" = "Enjoying the app?\n\n We'd love your support! ⭐\nA quick 5-star rating helps us improve and reach more users like you. Thanks!";
+"Remind me later" = "Remind me later";
+"No, thank you" = "No, thank you";
+"Review" = "Review";
+"review_alert_title" = "We Honored You - Now It's Your Turn!";
+"review_alert_message" = "As a token of appreciation for being part of our community, we've granted you exclusive lifetime access to our service—completely FREE! 🎉\n\nWe hope you're enjoying the experience so far. If you’re happy with what we've provided, we'd be incredibly grateful if you could take a moment to rate us on the App Store.";
 
-"messageT" = "Your Custom Template will render here";
-"Create" = "Create";
-
+// --- Onboarding & Welcome ---
+"welcome_message" = "Welcome to";
+"QRMaker" = "QRMaker";
+"scan_fast_precise" = "Scan Fast & Precise";
+"privacy_agreement_message" = "By continuing, you agree to our";
+"user_agreements" = "User Agreements";
+"and" = "and";
+"create_customize" = "Create instantly, Customize effortlessly.";
+"effortless_qr_barcode" = "Effortlessly create and customize QR codes & barcodes tailored to your needs with our versatile tools";
+"organize_share" = "Organize & Share Seamlessly";
+"organize_share_qr_barcode" = "Organize and share your QR codes & barcodes seamlessly using our intuitive file manager and sharing options";
+"must_have_app_for_iphone" = "Must Have App\n For iPhone";
+"fully_customizable" = "Fully Customizable";
+"custom_qr_description" = "Transform any standard QR code into your own unique design.";

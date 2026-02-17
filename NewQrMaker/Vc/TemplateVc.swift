@@ -22,7 +22,24 @@ class TemplateVc: UIViewController, sendimageValue, MFMailComposeViewControllerD
     
     func sendimage(image: UIImage,fileName:String) {
         
-        
+        let pressedCount = UserDefaults.standard.integer(forKey: "rate_press_count")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+        if pressedCount <= 2 {
+            
+        }
+
+        let createVC = storyboard.instantiateViewController(
+            withIdentifier: "CreateQrVc"
+        ) as! CreateQrVc
+
+        createVC.modalPresentationStyle = .fullScreen
+        createVC.isfromQr = true
+        createVC.templateImage = image
+        createVC.fileName = fileName
+
+        UIApplication.topMostViewController?
+            .transitionVc(vc: createVC, duration: 0.4, type: .fromRight)
        
         
     }

@@ -278,10 +278,10 @@ class CreateQrVc: UIViewController, sendIndex,CLLocationManagerDelegate, EKEvent
         create.setTitle("  Create".localize(), for: .normal)
         
         let attributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.systemFont(ofSize: 13, weight: .medium)
+            .font: UIFont.systemFont(ofSize: 15, weight: .medium)
         ]
 
-        let attributedTitle = NSAttributedString(string: "  " + "Create".localize(), attributes: attributes)
+        let attributedTitle = NSAttributedString(string:  "  " + "Create".localize(), attributes: attributes)
         create.setAttributedTitle(attributedTitle, for: .normal)
         
         
@@ -1959,13 +1959,21 @@ extension CreateQrVc:UICollectionViewDelegate, UICollectionViewDataSource,UIColl
                    let text = barCategoryArray[currentIndex] as? String {
                     
                     labels[i]?.text = text.localize()
+                    
+                    print("Loading image with name: \(text)")   // 👈 log here
+                    
                     images[i]?.image = UIImage(named: text)
+                    
+                    if images[i]?.image == nil {
+                        print("⚠️ Image not found for name: \(text)")
+                    }
                     
                 } else {
                     labels[i]?.text = ""
                     images[i]?.image = nil
                 }
             }
+
         }
 
         // MARK: - Hide Empty Views Automatically

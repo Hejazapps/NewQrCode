@@ -143,12 +143,24 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right1" translatesAutoresizingMaskIntoConstraints="NO" id="Ldl-aE-vdK">
                                                         <rect key="frame" x="0.0" y="0.0" width="171.33333333333334" height="100"/>
                                                     </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMT-wA-yqK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171.33333333333334" height="100"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="gotoBarCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w7N-VH-L0x"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstItem="XMT-wA-yqK" firstAttribute="centerX" secondItem="77m-xn-nHe" secondAttribute="centerX" id="4c2-0p-6J0"/>
+                                                    <constraint firstItem="XMT-wA-yqK" firstAttribute="width" secondItem="77m-xn-nHe" secondAttribute="width" id="5Dm-yr-cSM"/>
                                                     <constraint firstAttribute="bottom" secondItem="Ldl-aE-vdK" secondAttribute="bottom" id="D19-uB-d6n"/>
+                                                    <constraint firstItem="XMT-wA-yqK" firstAttribute="centerY" secondItem="77m-xn-nHe" secondAttribute="centerY" id="Hqv-iP-XXk"/>
                                                     <constraint firstItem="Ldl-aE-vdK" firstAttribute="top" secondItem="77m-xn-nHe" secondAttribute="top" id="URv-N3-zOh"/>
                                                     <constraint firstAttribute="trailing" secondItem="Ldl-aE-vdK" secondAttribute="trailing" id="WKb-1Y-g8E"/>
+                                                    <constraint firstItem="XMT-wA-yqK" firstAttribute="height" secondItem="77m-xn-nHe" secondAttribute="height" id="c79-CE-vJ3"/>
                                                     <constraint firstItem="Ldl-aE-vdK" firstAttribute="leading" secondItem="77m-xn-nHe" secondAttribute="leading" id="rVF-QT-pmg"/>
                                                 </constraints>
                                             </view>
@@ -858,14 +870,14 @@ QR Code</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJS-f2-24b">
-                                <rect key="frame" x="0.0" y="258" width="393" height="477"/>
+                                <rect key="frame" x="0.0" y="248" width="393" height="487"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Pr-1t-7di">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="477"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="487"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oLC-Vn-tjw">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="477"/>
-                                                <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="487"/>
+                                                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fa3-bg-saO">
                                                     <size key="itemSize" width="128" height="128"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -1047,7 +1059,7 @@ connection</string>
                             <constraint firstItem="5om-Lg-sT0" firstAttribute="width" secondItem="dl7-fv-ndJ" secondAttribute="width" id="ZFU-N4-weR"/>
                             <constraint firstItem="547-8x-ReF" firstAttribute="top" secondItem="eDj-FS-0du" secondAttribute="bottom" constant="20" id="bY4-KD-HdY"/>
                             <constraint firstItem="lc5-Yb-hsu" firstAttribute="trailing" secondItem="dl7-fv-ndJ" secondAttribute="trailing" constant="10" id="db5-hV-8KO"/>
-                            <constraint firstItem="zJS-f2-24b" firstAttribute="top" secondItem="547-8x-ReF" secondAttribute="bottom" constant="10" id="eNf-Vc-4pf"/>
+                            <constraint firstItem="zJS-f2-24b" firstAttribute="top" secondItem="547-8x-ReF" secondAttribute="bottom" id="eNf-Vc-4pf"/>
                             <constraint firstItem="G23-Yi-QGB" firstAttribute="top" secondItem="Qbs-aY-gfC" secondAttribute="bottom" constant="10" id="fRd-GK-r6K"/>
                             <constraint firstItem="B7T-xM-iT8" firstAttribute="height" secondItem="G23-Yi-QGB" secondAttribute="height" id="fSs-3e-CmU"/>
                             <constraint firstItem="lc5-Yb-hsu" firstAttribute="trailing" secondItem="G23-Yi-QGB" secondAttribute="trailing" id="rrI-sk-z2r"/>
