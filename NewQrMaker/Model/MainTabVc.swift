@@ -48,10 +48,3 @@ class MainTabVc: UITabBarController, UITabBarControllerDelegate {
     // MARK: - Appearance
 }
 
-
-
-extension String{
-    func localize() -> String{
-        return NSLocalizedString(self, comment: "ANYTHING")
-    }
-}
