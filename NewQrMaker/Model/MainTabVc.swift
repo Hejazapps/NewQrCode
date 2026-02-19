@@ -5,7 +5,7 @@ import AVFoundation
  
 class MainTabVc: UITabBarController, UITabBarControllerDelegate {
 
-    let titles = ["Home", "Template", "Scan", "Drafts","Settings"]
+    let titles = ["Home", "Template", "Scan", "Drafts"]
     var isProfileSelected = false
 
     override func viewDidLoad() {

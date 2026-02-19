@@ -73,6 +73,7 @@ class HomeVc: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         gradientimv.layer.cornerRadius = 20.0
+        proBtnHolder.applyTopButtonShadow()
         
     }
     
@@ -557,3 +558,23 @@ extension UIViewController {
         present(vc, animated: false, completion: nil)
     }
  }
+
+extension UIView {
+    
+    func applyTopButtonShadow() {
+        self.layoutIfNeeded()
+        
+        self.layer.cornerRadius = 23
+        self.layer.masksToBounds = false
+        
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.07
+        self.layer.shadowOffset = CGSize(width: 0, height: 12)
+        self.layer.shadowRadius = 20
+        
+        self.layer.shadowPath = UIBezierPath(
+            roundedRect: self.bounds,
+            cornerRadius: 22
+        ).cgPath
+    }
+}
