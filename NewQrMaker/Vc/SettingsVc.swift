@@ -46,7 +46,7 @@ class SettingsVc: UIViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var vibrateWatch: UISwitch!
     @IBOutlet weak var soundWatch: UISwitch!
     @IBOutlet weak var HeightForTotal: NSLayoutConstraint!
-    @IBOutlet weak var holderView: UIView!
+    @IBOutlet weak var holderView: CustomView!
     
     
     @IBOutlet weak var sueg: UILabel!
@@ -77,7 +77,38 @@ class SettingsVc: UIViewController, MFMailComposeViewControllerDelegate {
       
     }
     
+    func checkOutlet(_ outlet: Any?, name: String) {
+        if outlet == nil {
+            print("❌ Outlet is NIL -> \(name)")
+        } else {
+            print("✅ Outlet OK -> \(name)")
+        }
+    }
+    
     func updateText() {
+
+        checkOutlet(purchaseHeaderLabel, name: "purchaseHeaderLabel")
+        checkOutlet(sueg, name: "sueg")
+        checkOutlet(purchaseLabel, name: "purchaseLabel")
+        checkOutlet(historyLabel, name: "historyLabel")
+        checkOutlet(soundLabel, name: "soundLabel")
+        checkOutlet(soundSubLabel, name: "soundSubLabel")
+        checkOutlet(vibrateLabel, name: "vibrateLabel")
+        checkOutlet(vibrateSublabel, name: "vibrateSublabel")
+        checkOutlet(restoreLabel, name: "restoreLabel")
+        checkOutlet(shareLabel, name: "shareLabel")
+        checkOutlet(historySubLabel, name: "historySubLabel")
+        checkOutlet(linkOpenValue, name: "linkOpenValue")
+        checkOutlet(linkOpenSubValue, name: "linkOpenSubValue")
+        checkOutlet(appSettingLabel, name: "appSettingLabel")
+        checkOutlet(OthersLabel, name: "OthersLabel")
+        checkOutlet(rateLabel, name: "rateLabel")
+        checkOutlet(contactLabel, name: "contactLabel")
+        checkOutlet(termsOfUseLabel, name: "termsOfUseLabel")
+        checkOutlet(privacyLabel, name: "privacyLabel")
+        checkOutlet(settingsTitle, name: "settingsTitle")
+
+        // Then your assignments
         purchaseHeaderLabel.text = "Purchase".localize()
         sueg.text = "Suggest".localize()
         purchaseLabel.text = "Purchase".localize()
@@ -99,6 +130,7 @@ class SettingsVc: UIViewController, MFMailComposeViewControllerDelegate {
         privacyLabel.text = "Privacy Policy".localize()
         settingsTitle.text = "Settings".localize()
     }
+
     
     @objc func switchChanged(mySwitch: UISwitch) {
         
@@ -205,6 +237,17 @@ class SettingsVc: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     
+    @IBAction func backBtnPressed(_ sender: Any) {
+        
+        let transition = CATransition()
+        transition.duration = 0.4
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromLeft
+        view.window?.layer.add(transition, forKey: "leftToRightTransition")
+        dismiss(animated: false, completion: nil)
+        
+    }
     
     @IBAction func gotoOffer(_ sender: Any) {
         

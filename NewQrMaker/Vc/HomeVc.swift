@@ -200,7 +200,17 @@ class HomeVc: UIViewController {
     
  
     
-
+    @IBAction func gotoSettings(_ sender: Any) {
+        
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SettingsVc") as!  SettingsVc
+        vc.modalPresentationStyle = .fullScreen
+        
+        transitionVc(vc: vc, duration: 0.4, type: .fromRight)
+        
+        
+    }
+    
     func createGradientImage(size: CGSize) -> UIImage? {
         let colors = [
             UIColor(red: 229/255, green: 31/255, blue: 31/255, alpha: 1).cgColor,
