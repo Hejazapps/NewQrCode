@@ -42,6 +42,10 @@ class ScannerVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate, UNUse
     // MARK: - LifeCycle
     var alreadySelected = false
     
+    let closeButton = UIButton(type: .custom)
+
+    
+    
     var codeArray = [CodeItem]()
     
     override func viewDidLoad() {
@@ -50,9 +54,30 @@ class ScannerVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate, UNUse
         permissionView.isHidden = true
         self.updateLabel()
         
+    }
+    
+    
+    @objc func handleCloseTapped() {
+        captureSession?.stopRunning()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "kishor"), object: nil)
         
+    }
+    
+    
+    func addCloseButton() {
         
+        closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
+        closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
+        closeButton.tintColor = .white
+        closeButton.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+        closeButton.layer.cornerRadius = 20
+        closeButton.addTarget(self, action: #selector(handleCloseTapped), for: .touchUpInside)
         
+        let topPadding = view.safeAreaInsets.top + 10
+        closeButton.frame = CGRect(x: 20, y: topPadding, width: 40, height: 40)
+        closeButton.autoresizingMask = [.flexibleRightMargin, .flexibleBottomMargin]
+        
+        view.addSubview(closeButton)
     }
     
     @objc private func handleDoneAction() {
@@ -272,6 +297,8 @@ class ScannerVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate, UNUse
             donebtn.isHidden = false
             
         }
+        
+         
         
     }
     
@@ -611,6 +638,7 @@ class ScannerVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate, UNUse
         
         self.addFlashButton()
         self.addGalleryButton()
+        self.addCloseButton()
         
         do {
             try videoCaptureDevice.lockForConfiguration()

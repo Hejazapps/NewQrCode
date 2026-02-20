@@ -38,6 +38,15 @@ class MainTabVc: UITabBarController, UITabBarControllerDelegate {
         
     }
     
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+           // Hide tab bar if index 2 (Scan) is selected
+           if let index = viewControllers?.firstIndex(of: viewController), index == 2 {
+               tabBar.isHidden = true
+           } else {
+               tabBar.isHidden = false
+           }
+       }
+    
     // MARK: - Tab Items
     private func setupTabBarItems() {
 
