@@ -30,6 +30,8 @@ class MainTabVc: UITabBarController, UITabBarControllerDelegate {
         if notification.name == NSNotification.Name(rawValue: "kishor"){
             self.selectedIndex = 1
            // Store.sharedInstance.setShowHistoryPage(value: false)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "kishor1"), object: nil)
+           
             self.tabBar.isHidden = false
         }
 

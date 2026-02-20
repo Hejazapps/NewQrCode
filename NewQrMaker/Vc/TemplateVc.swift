@@ -101,12 +101,26 @@ class TemplateVc: UIViewController, sendimageValue, MFMailComposeViewControllerD
         
     }
     
+    
+    @objc func reloadData5(notification: NSNotification) {
+        
+        self.allView?.shouldAnimateGifs  = true
+        self.allView?.collectionView.reloadData()
+        
+        customGifView.alpha = 1
+        
+        
+      
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.reigsterXib()
         
        
-        
+        NotificationCenter.default.addObserver(self, selector:#selector(reloadData5(notification:)), name:NSNotification.Name(rawValue: "kishor1"), object: nil)
+
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.customtemp  = AllCustom.loadFromXib()

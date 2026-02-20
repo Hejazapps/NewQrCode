@@ -23,11 +23,9 @@ class VideoTrimmerViewController: UIViewController {
     private var videoNaturalSize: CGSize = .zero
     
     private let backButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "chevron.left"), for: .normal)
-        button.tintColor = .white
-        button.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        button.layer.cornerRadius = 20
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(named: "Nav_btn"), for: .normal)
+        button.adjustsImageWhenHighlighted = false
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -64,10 +62,23 @@ class VideoTrimmerViewController: UIViewController {
     
     private let playButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(named:"Nav_btn"), for: .normal)
-        
+        button.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
+        button.tintColor = .white
+        button.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        button.layer.cornerRadius = 30
+        button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
+    }()
+    
+    
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Edit Video"
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.textColor = .black
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
     
     private let exportButton: UIButton = {
@@ -115,6 +126,7 @@ class VideoTrimmerViewController: UIViewController {
         view.addSubview(playButton)
         view.addSubview(exportButton)
         view.addSubview(backButton)
+        view.addSubview(titleLabel)
         view.backgroundColor =  UIColor(
             red: 245/255,
             green: 245/255,
@@ -133,8 +145,13 @@ class VideoTrimmerViewController: UIViewController {
         NSLayoutConstraint.activate([
             backButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
             backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            backButton.widthAnchor.constraint(equalToConstant: 40),
-            backButton.heightAnchor.constraint(equalToConstant: 40),
+          
+            backButton.widthAnchor.constraint(equalToConstant: 80),
+            backButton.heightAnchor.constraint(equalTo: backButton.widthAnchor, multiplier: 216.0/368.0),
+            
+            
+            titleLabel.centerYAnchor.constraint(equalTo: backButton.centerYAnchor),
+            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             playerContainerView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -40),
             playerContainerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
