@@ -10,7 +10,7 @@ import FirebaseDatabase
 
 
 
-class HomeVc: UIViewController {
+class HomeVc: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
     @IBOutlet weak var viewAll: UILabel!
     @IBOutlet weak var tlabel: UILabel!
@@ -128,6 +128,22 @@ class HomeVc: UIViewController {
     }
     
     
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+        
+        if let url = info[.mediaURL] as? URL {
+            let trimmerVC = VideoTrimmerViewController()
+            trimmerVC.videoURL = url
+            trimmerVC.modalPresentationStyle = .fullScreen
+            self.present(trimmerVC, animated: true)
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
+    }
+    
     func getAllData() {
         // Clear previous data
         ref = Database.database().reference()
@@ -199,6 +215,17 @@ class HomeVc: UIViewController {
 
     
  
+    @IBAction func gotoGif(_ sender: Any) {
+        
+        
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary    // or .camera to record
+        picker.mediaTypes = ["public.movie"] // videos only
+        picker.videoQuality = .typeHigh
+        picker.delegate = self
+        present(picker, animated: true)
+        
+    }
     
     @IBAction func gotoSettings(_ sender: Any) {
         

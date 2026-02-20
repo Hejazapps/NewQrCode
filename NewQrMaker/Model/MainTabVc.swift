@@ -13,11 +13,29 @@ class MainTabVc: UITabBarController, UITabBarControllerDelegate {
         self.delegate = self
 
         setupTabBarItems()
+        
+        NotificationCenter.default.addObserver(self, selector:#selector(reloadData5(notification:)), name:NSNotification.Name(rawValue: "kishor"), object: nil)
+        
+        
+        
+        
 
        
     }
 
   
+    
+    @objc func reloadData5(notification: NSNotification) {
+        
+        if notification.name == NSNotification.Name(rawValue: "kishor"){
+            self.selectedIndex = 1
+           // Store.sharedInstance.setShowHistoryPage(value: false)
+            self.tabBar.isHidden = false
+        }
+
+        
+    }
+    
     // MARK: - Tab Items
     private func setupTabBarItems() {
 
