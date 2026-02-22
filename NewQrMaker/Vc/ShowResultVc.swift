@@ -702,6 +702,8 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
     var shouldShowWhite = false
     
     
+    @IBOutlet weak var roundedHolderView: UIView!
+    @IBOutlet weak var eyesLabel: UILabel!
     @IBOutlet weak var gifOverLayQr: UIImageView!
     @IBOutlet weak var gifimv: UIImageView!
     @IBOutlet weak var gifView: UIView!
@@ -1843,6 +1845,7 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
         fontsizeLabel.text = "Font Size".localize()
         colorLabel.text = "Color".localize()
         fontlabel.text = "Font".localize()
+        eyesLabel.text = "Eyes".localize()
         textFiled.placeholder = "Enter Text".localize()
         
         bottomTemplateView  = BottomTemplateView.loadFromXib()
@@ -2509,6 +2512,9 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
         heightForMainView.constant = 200
         
         
+        roundedHolderView.layer.cornerRadius = 40
+        roundedHolderView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        roundedHolderView.layer.masksToBounds = true
         
         let size = AVMakeRect(aspectRatio: imv.image!.size, insideRect: imv.frame)
         widthForMainView.constant = size.width
