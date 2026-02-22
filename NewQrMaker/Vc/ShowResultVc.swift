@@ -701,7 +701,9 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
     var globalGifData: NSData?
     var shouldShowWhite = false
     
+    @IBOutlet weak var widghetLabel: UILabel!
     
+    @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var roundedHolderView: UIView!
     @IBOutlet weak var eyesLabel: UILabel!
     @IBOutlet weak var gifOverLayQr: UIImageView!
@@ -1844,8 +1846,10 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
         shareLabel.text = "Pixel".localize()
         fontsizeLabel.text = "Font Size".localize()
         colorLabel.text = "Color".localize()
+        captionLabel.text = "Captions".localize()
         fontlabel.text = "Font".localize()
         eyesLabel.text = "Eyes".localize()
+        widghetLabel.text = "Widgets".localize()
         textFiled.placeholder = "Enter Text".localize()
         
         bottomTemplateView  = BottomTemplateView.loadFromXib()
@@ -2048,6 +2052,13 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
         }
         
         print("temp name i got \(templateFileName)")
+        
+        
+        tablewView.register(UINib(nibName: "TextCellStyle", bundle: nil), forCellReuseIdentifier: "TextCellStyle")
+        tablewView.separatorColor = UIColor.clear
+       
+        tablewView.showsVerticalScrollIndicator = false
+        tablewView.showsHorizontalScrollIndicator = false
     }
     
     
@@ -3308,14 +3319,12 @@ extension ShowResultVc: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath as IndexPath) as!ExpandableCellTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TextCellStyle", for: indexPath as IndexPath) as!TextCellStyle
         cell.lbl.text = ""
         cell.lbl.text = showText
         
         
         
-        print("1234===========\(showText)")
-        cell.selectionStyle = .none
         cell.lbl.textColor  = UIColor.black
         return cell
     }

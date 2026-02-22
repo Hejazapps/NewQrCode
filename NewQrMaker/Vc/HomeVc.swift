@@ -30,6 +30,9 @@ class HomeVc: UIViewController, UIImagePickerControllerDelegate & UINavigationCo
     var totalCategory = [String]()
     var parsedTemplate: [String: [Dictionary<String,String>]] = [:]
     
+    
+    
+    
     @IBOutlet weak var rightView: CustomView!
     @IBOutlet weak var leftView: CustomView!
     var ref: DatabaseReference!

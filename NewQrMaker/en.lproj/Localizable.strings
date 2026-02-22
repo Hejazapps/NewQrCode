@@ -9,7 +9,8 @@
 "Create Template" = "Create Template";
 "Batch Scan" = "Batch Scan";
 "Create Gif" = "Create Gif";
-"Create Vcard" = "Create Vcard";
+"Create 
+" = "Create Vcard";
 "Decorate QR Code" = "Decorate QR Code";
 "Create AI QR" = "Create AI QR";
 "Create" = "Create";
@@ -301,4 +302,6 @@
 
 "Pixel" = "Pixel";
 "Eyes" = "Eyes";
+"Caption" = "Caption";
+"Widgets" = "Widgets";
 
