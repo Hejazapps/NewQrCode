@@ -18,6 +18,78 @@
             endingLineNumber = "49"
             landmarkName = "HomeVc"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "1006CF5A-B18D-4816-9E5A-CB04CC5E6767 - 55ce7c1133b114c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewQrMaker.HomeVc.collectionViewHolder.getter : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "NewQrMaker.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sadiqulamin/Documents/GitHub/Outlet-Expense-IOS/NewQrCode/NewQrMaker/Vc/HomeVc.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "1006CF5A-B18D-4816-9E5A-CB04CC5E6767 - e1a49d12e0e7ecc8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewQrMaker.HomeVc.collectionViewHolder.setter : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "NewQrMaker.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sadiqulamin/Documents/GitHub/Outlet-Expense-IOS/NewQrCode/NewQrMaker/Vc/HomeVc.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "1006CF5A-B18D-4816-9E5A-CB04CC5E6767 - 4b164ad29771b639"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewQrMaker.HomeVc.collectionViewHolder.modify : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "NewQrMaker.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sadiqulamin/Documents/GitHub/Outlet-Expense-IOS/NewQrCode/NewQrMaker/Vc/HomeVc.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "1006CF5A-B18D-4816-9E5A-CB04CC5E6767 - 1b8004bfd02a87aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewQrMaker.HomeVc.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; NewQrMaker.HomeVc"
+                  moduleName = "NewQrMaker.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sadiqulamin/Documents/GitHub/Outlet-Expense-IOS/NewQrCode/NewQrMaker/Vc/HomeVc.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49">
+               </Location>
+               <Location
+                  uuid = "1006CF5A-B18D-4816-9E5A-CB04CC5E6767 - bdab4815bb968af3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewQrMaker.HomeVc.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;NewQrMaker.HomeVc&gt;"
+                  moduleName = "NewQrMaker.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sadiqulamin/Documents/GitHub/Outlet-Expense-IOS/NewQrCode/NewQrMaker/Vc/HomeVc.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -34,6 +106,78 @@
             endingLineNumber = "12"
             landmarkName = "AllViewData"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "2478711D-5DE4-4D9A-AD15-DB9B9850556C - 3f62ee0e405d335f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewQrMaker.AllViewData.selectedIndexPath.getter : Swift.Optional&lt;Foundation.IndexPath&gt;"
+                  moduleName = "NewQrMaker.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sadiqulamin/Documents/GitHub/Outlet-Expense-IOS/NewQrCode/NewQrMaker/Vc/AllViewData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "2478711D-5DE4-4D9A-AD15-DB9B9850556C - c97ef4656876e16a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewQrMaker.AllViewData.selectedIndexPath.setter : Swift.Optional&lt;Foundation.IndexPath&gt;"
+                  moduleName = "NewQrMaker.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sadiqulamin/Documents/GitHub/Outlet-Expense-IOS/NewQrCode/%3Cstdin%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "2478711D-5DE4-4D9A-AD15-DB9B9850556C - 8bb377f7e646af5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewQrMaker.AllViewData.selectedIndexPath.modify : Swift.Optional&lt;Foundation.IndexPath&gt;"
+                  moduleName = "NewQrMaker.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sadiqulamin/Documents/GitHub/Outlet-Expense-IOS/NewQrCode/NewQrMaker/Vc/AllViewData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "2478711D-5DE4-4D9A-AD15-DB9B9850556C - 9180a6e1732c0bee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewQrMaker.AllViewData.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; NewQrMaker.AllViewData"
+                  moduleName = "NewQrMaker.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sadiqulamin/Documents/GitHub/Outlet-Expense-IOS/NewQrCode/NewQrMaker/Vc/AllViewData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12">
+               </Location>
+               <Location
+                  uuid = "2478711D-5DE4-4D9A-AD15-DB9B9850556C - 214fa5059dae43e0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NewQrMaker.AllViewData.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;NewQrMaker.AllViewData&gt;"
+                  moduleName = "NewQrMaker.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sadiqulamin/Documents/GitHub/Outlet-Expense-IOS/NewQrCode/NewQrMaker/Vc/AllViewData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -49,6 +193,22 @@
             startingLineNumber = "582"
             endingLineNumber = "582"
             landmarkName = "transitionVc(vc:duration:type:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1F1714D8-856F-4DA8-AC6E-DB0E0AB6EEF4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewQrMaker/Vc/ShowResultVc.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "338"
+            endingLineNumber = "338"
+            landmarkName = "setAllValue(obj:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -625,8 +625,8 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
         self.shapeGradeint = shapeGradeint
         self.selectedIamge = background
         
-        widthForMainView.constant = imageviewHolder.frame.width
-        heightForMainView.constant = imageviewHolder.frame.height - CGFloat(deductionValue)
+        widthForMainView.constant = 200
+        heightForMainView.constant = 200
         
         self.updateAll()
         
@@ -753,8 +753,6 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
     @IBOutlet weak var textChangeholderView: UIView!
     @IBOutlet weak var templateImv: UIView!
     @IBOutlet weak var imageviewHolder: UIView!
-    @IBOutlet weak var holderView: UIView!
-    @IBOutlet weak var barCodeView: UIView!
     @IBOutlet weak var qrCodeStackValue: UIStackView!
     
     @IBOutlet weak var tablewView: UITableView!
@@ -1839,9 +1837,9 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
         preview.text = "Preset"
         
         templateLabel.text = "Template".localize()
-        deisgnLabel.text = "Design".localize()
-        contentLabel.text = "Content".localize()
-        shareLabel.text = "Share".localize()
+        deisgnLabel.text = "Color".localize()
+        contentLabel.text = "Logo".localize()
+        shareLabel.text = "Pixel".localize()
         fontsizeLabel.text = "Font Size".localize()
         colorLabel.text = "Color".localize()
         fontlabel.text = "Font".localize()
@@ -2507,8 +2505,8 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        widthForMainView.constant = imageviewHolder.frame.width
-        heightForMainView.constant = imageviewHolder.frame.height - CGFloat(deductionValue)
+        widthForMainView.constant =  200
+        heightForMainView.constant = 200
         
         
         
