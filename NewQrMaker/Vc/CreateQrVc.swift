@@ -991,23 +991,23 @@ class CreateQrVc: UIViewController, sendIndex,CLLocationManagerDelegate, EKEvent
         
         
         
-//        let value = QrParser.getBarCodeObj(text: string)
-//        
-//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ShowResultVc") as! ShowResultVc
-//        vc.stringValue = string
-//        vc.modalPresentationStyle = .fullScreen
-//        vc.createDataModelArray = createDataModelArray
-//        vc.showText = value
-//        vc.currenttypeOfQrBAR = "event"
-//        vc.eventF = event
-//        vc.templateImage = templateImage
-//        vc.templateFileName = fileName
-//        vc.selectedPreset = self.selectedPreset
-//        vc.gifData = gifData
-//        vc.shouldShowWhite = shouldShowWhite
-//        UIApplication.topMostViewController?.present(vc, animated: true, completion: {
-//            self.btnTag(index: 0)
-//        })
+        let value = QrParser.getBarCodeObj(text: string)
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ShowResultVc") as! ShowResultVc
+        vc.stringValue = string
+        vc.modalPresentationStyle = .fullScreen
+        vc.createDataModelArray = createDataModelArray
+        vc.showText = value
+        vc.currenttypeOfQrBAR = "event"
+        vc.eventF = event
+        vc.templateImage = templateImage
+        vc.templateFileName = fileName
+        vc.selectedPreset = self.selectedPreset
+        vc.gifData = gifData
+        vc.shouldShowWhite = shouldShowWhite
+        UIApplication.topMostViewController?.present(vc, animated: true, completion: {
+            self.btnTag(index: 0)
+        })
         
     }
     @IBAction func createBtnPressed(_ sender: Any) {
@@ -1063,21 +1063,21 @@ class CreateQrVc: UIViewController, sendIndex,CLLocationManagerDelegate, EKEvent
         
         self.dismiss(animated: true) {
             
-//            let value = QrParser.getBarCodeObj(text: string)
-//            
-//            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ShowResultVc") as! ShowResultVc
-//            vc.stringValue = string
-//            vc.modalPresentationStyle = .fullScreen
-//            vc.createDataModelArray = self.createDataModelArray
-//            vc.showText = value
-//            vc.currenttypeOfQrBAR = self.temp
-//            vc.isfromQr = true
-//            vc.templateImage = self.templateImage
-//            vc.templateFileName = self.fileName
-//            vc.selectedPreset = self.selectedPreset
-//            vc.gifData = self.gifData
-//            vc.shouldShowWhite = self.shouldShowWhite
-//            UIApplication.topMostViewController?.transitionVc(vc: vc, duration: 0.4, type: .fromRight)
+            let value = QrParser.getBarCodeObj(text: string)
+            
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ShowResultVc") as! ShowResultVc
+            vc.stringValue = string
+            vc.modalPresentationStyle = .fullScreen
+            vc.createDataModelArray = self.createDataModelArray
+            vc.showText = value
+            vc.currenttypeOfQrBAR = self.temp
+            vc.isfromQr = true
+            vc.templateImage = self.templateImage
+            vc.templateFileName = self.fileName
+            vc.selectedPreset = self.selectedPreset
+            vc.gifData = self.gifData
+            vc.shouldShowWhite = self.shouldShowWhite
+            UIApplication.topMostViewController?.transitionVc(vc: vc, duration: 0.4, type: .fromRight)
         }
         
     }
@@ -1301,19 +1301,19 @@ class CreateQrVc: UIViewController, sendIndex,CLLocationManagerDelegate, EKEvent
                 let image = BarCodeGenerator.getBarCodeImage(type: self.currentSelectedName, value: string!)
                 
                 if let value = image {
-//                    self.dismiss(animated: true) {
-//                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ShowResultVc") as! ShowResultVc
-//                        vc.stringValue = string!
-//                        vc.modalPresentationStyle = .fullScreen
-//                        vc.image = image
-//                        vc.isfromQr = false
-//                        vc.currenttypeOfQrBAR = self.currentSelectedName
-//                        
-//                        
-//                        
-//                        
-//                        UIApplication.topMostViewController?.transitionVc(vc: vc, duration: 0.4, type: .fromRight)
-//                    }
+                    self.dismiss(animated: true) {
+                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ShowResultVc") as! ShowResultVc
+                        vc.stringValue = string!
+                        vc.modalPresentationStyle = .fullScreen
+                        vc.image = image
+                        vc.isfromQr = false
+                        vc.currenttypeOfQrBAR = self.currentSelectedName
+                        
+                        
+                        
+                        
+                        UIApplication.topMostViewController?.transitionVc(vc: vc, duration: 0.4, type: .fromRight)
+                    }
                     
                     return
                     

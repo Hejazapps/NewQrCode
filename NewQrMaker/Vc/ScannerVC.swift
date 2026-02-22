@@ -59,7 +59,7 @@ class ScannerVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate, UNUse
     
     @objc func handleCloseTapped() {
         captureSession?.stopRunning()
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "kishor"), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "sadiqul"), object: nil)
         
     }
     
@@ -385,14 +385,14 @@ class ScannerVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate, UNUse
         }
         
         
-//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ShowResultVc") as! ShowResultVc
-//        vc.stringValue = qrCodeLink
-//        vc.modalPresentationStyle = .fullScreen
-//        vc.showText = value
-//        vc.currenttypeOfQrBAR = type
-//        vc.createDataModelArray = value2
-//        vc.isFromScanned = true
-//        UIApplication.topMostViewController?.transitionVc(vc: vc, duration: 0.4, type: .fromRight)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ShowResultVc") as! ShowResultVc
+        vc.stringValue = qrCodeLink
+        vc.modalPresentationStyle = .fullScreen
+        vc.showText = value
+        vc.currenttypeOfQrBAR = type
+        vc.createDataModelArray = value2
+        vc.isFromScanned = true
+        UIApplication.topMostViewController?.transitionVc(vc: vc, duration: 0.4, type: .fromRight)
         
     }
     
@@ -516,13 +516,13 @@ class ScannerVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate, UNUse
                 return
             }
             
-//            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ShowResultVc") as! ShowResultVc
-//            vc.stringValue = code
-//            vc.modalPresentationStyle = .fullScreen
-//            vc.isFromScanned = true
-//            vc.isfromQr = false
-//            vc.currenttypeOfQrBAR = name!
-//            transitionVc(vc: vc, duration: 0.4, type: .fromRight)
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "ShowResultVc") as! ShowResultVc
+            vc.stringValue = code
+            vc.modalPresentationStyle = .fullScreen
+            vc.isFromScanned = true
+            vc.isfromQr = false
+            vc.currenttypeOfQrBAR = name!
+            transitionVc(vc: vc, duration: 0.4, type: .fromRight)
             
         }
         
@@ -847,17 +847,17 @@ class ScannerVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate, UNUse
                 }
                 
                 
-//                isCodeFound = true
-//                let vc = self.storyboard?.instantiateViewController(withIdentifier: "ShowResultVc") as! ShowResultVc
-//                vc.stringValue = value
-//                vc.modalPresentationStyle = .fullScreen
-//                vc.image = image
-//                vc.isFromScanned = true
-//                vc.isfromQr = false
-//                vc.currenttypeOfQrBAR = currentBarCode
-//                vc.isFromGallery = true
-//                
-//                UIApplication.topMostViewController?.transitionVc(vc: vc, duration: 0.4, type: .fromRight)
+                isCodeFound = true
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "ShowResultVc") as! ShowResultVc
+                vc.stringValue = value
+                vc.modalPresentationStyle = .fullScreen
+                vc.image = image
+                vc.isFromScanned = true
+                vc.isfromQr = false
+                vc.currenttypeOfQrBAR = currentBarCode
+                vc.isFromGallery = true
+                
+                UIApplication.topMostViewController?.transitionVc(vc: vc, duration: 0.4, type: .fromRight)
                 
                 
             }

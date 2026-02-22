@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		18A72C082F4032B900FB7D1C /* ZXingObjC in Frameworks */ = {isa = PBXBuildFile; productRef = 18A72C072F4032B900FB7D1C /* ZXingObjC */; };
 		C86A686C2F407EA90063897E /* CDCodabarView in Frameworks */ = {isa = PBXBuildFile; productRef = C86A686B2F407EA90063897E /* CDCodabarView */; };
+		C871D3FC2F4A2C9200000E18 /* IHProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = C871D3FB2F4A2C9200000E18 /* IHProgressHUD */; };
 		C879B2C52F37C66C004822E9 /* FirebaseAI in Frameworks */ = {isa = PBXBuildFile; productRef = C879B2C42F37C66C004822E9 /* FirebaseAI */; };
 		C879B2C72F37C66C004822E9 /* FirebaseAILogic in Frameworks */ = {isa = PBXBuildFile; productRef = C879B2C62F37C66C004822E9 /* FirebaseAILogic */; };
 		C879B2C92F37C66C004822E9 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C879B2C82F37C66C004822E9 /* FirebaseAnalytics */; };
@@ -69,6 +70,12 @@
 			exceptions = (
 				C860EADF2F36FE620009B258 /* Exceptions for "NewQrMaker" folder in "NewQrMaker" target */,
 			);
+			explicitFolders = (
+				"Resources/Body Shape",
+				Resources/Fonts,
+				Resources/Logo,
+				"Resources/Position maker",
+			);
 			path = NewQrMaker;
 			sourceTree = "<group>";
 		};
@@ -98,6 +105,7 @@
 				C8FF567F2F3A48A700E34D7C /* Lottie in Frameworks */,
 				C879B2DB2F37C66C004822E9 /* FirebaseDatabase in Frameworks */,
 				C879B2F12F37C66C004822E9 /* FirebaseStorage in Frameworks */,
+				C871D3FC2F4A2C9200000E18 /* IHProgressHUD in Frameworks */,
 				C8FF56792F3A3A6F00E34D7C /* PryntTrimmerView in Frameworks */,
 				C879B2EF2F37C66C004822E9 /* FirebaseRemoteConfig in Frameworks */,
 				C879B2C92F37C66C004822E9 /* FirebaseAnalytics in Frameworks */,
@@ -201,6 +209,7 @@
 				C8FF56812F3A49E100E34D7C /* RSBarcodes_Swift */,
 				18A72C072F4032B900FB7D1C /* ZXingObjC */,
 				C86A686B2F407EA90063897E /* CDCodabarView */,
+				C871D3FB2F4A2C9200000E18 /* IHProgressHUD */,
 			);
 			productName = NewQrMaker;
 			productReference = C860EACD2F36FE600009B258 /* NewQrMaker.app */;
@@ -249,6 +258,7 @@
 				C8FF56802F3A49E100E34D7C /* XCRemoteSwiftPackageReference "RSBarcodes_Swift" */,
 				18A72C062F4032B900FB7D1C /* XCRemoteSwiftPackageReference "ZXingObjC" */,
 				C86A686A2F407EA90063897E /* XCRemoteSwiftPackageReference "CDCodabarView" */,
+				C871D3FA2F4A2C9200000E18 /* XCRemoteSwiftPackageReference "IHProgressHUD" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C860EACE2F36FE600009B258 /* Products */;
@@ -519,6 +529,14 @@
 				minimumVersion = 1.3.0;
 			};
 		};
+		C871D3FA2F4A2C9200000E18 /* XCRemoteSwiftPackageReference "IHProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swiftify-Corp/IHProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.8;
+			};
+		};
 		C879B2C32F37C66C004822E9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -643,6 +661,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C86A686A2F407EA90063897E /* XCRemoteSwiftPackageReference "CDCodabarView" */;
 			productName = CDCodabarView;
+		};
+		C871D3FB2F4A2C9200000E18 /* IHProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C871D3FA2F4A2C9200000E18 /* XCRemoteSwiftPackageReference "IHProgressHUD" */;
+			productName = IHProgressHUD;
 		};
 		C879B2C42F37C66C004822E9 /* FirebaseAI */ = {
 			isa = XCSwiftPackageProductDependency;

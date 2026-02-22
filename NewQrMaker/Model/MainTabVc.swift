@@ -15,7 +15,7 @@ class MainTabVc: UITabBarController, UITabBarControllerDelegate {
         setupTabBarItems()
         
         NotificationCenter.default.addObserver(self, selector:#selector(reloadData5(notification:)), name:NSNotification.Name(rawValue: "kishor"), object: nil)
-        
+        NotificationCenter.default.addObserver(self, selector:#selector(reloadData4(notification:)), name:NSNotification.Name(rawValue: "sadiqul"), object: nil)
         
         
         
@@ -33,6 +33,17 @@ class MainTabVc: UITabBarController, UITabBarControllerDelegate {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "kishor1"), object: nil)
            
             self.tabBar.isHidden = false
+        }
+
+        
+    }
+    
+    @objc func reloadData4(notification: NSNotification) {
+        
+        if notification.name == NSNotification.Name(rawValue: "sadiqul"){
+            self.selectedIndex = 0
+            self.tabBar.isHidden = false
+            
         }
 
         

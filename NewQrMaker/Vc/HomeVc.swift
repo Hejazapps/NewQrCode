@@ -54,7 +54,6 @@ class HomeVc: UIViewController, UIImagePickerControllerDelegate & UINavigationCo
         "Collapse More",
         "Create Vcard",
         "Decorate QR Code",
-        "Create AI QR"
     ]
     
    

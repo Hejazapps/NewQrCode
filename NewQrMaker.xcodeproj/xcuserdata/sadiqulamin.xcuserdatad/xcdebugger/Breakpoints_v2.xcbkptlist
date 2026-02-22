@@ -46,8 +46,8 @@
             filePath = "NewQrMaker/Vc/HomeVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "583"
-            endingLineNumber = "583"
+            startingLineNumber = "582"
+            endingLineNumber = "582"
             landmarkName = "transitionVc(vc:duration:type:)"
             landmarkType = "7">
          </BreakpointContent>
