@@ -2062,6 +2062,9 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
         tablewView.showsHorizontalScrollIndicator = false
     }
     
+    @IBAction func downTheViewForT(_ sender: Any) {
+        bottomSpaceTemplateView.constant = -5000
+    }
     
     func updateTemplateimv() {
         if templateFileName?.count ?? 0 > 0 {
@@ -2148,7 +2151,7 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
     func addXibFile() {
         
         holderTemplateView.roundCorners([.topRight,.topLeft], radius: 30)
-        bottomTemplateView?.frame = CGRect(x: 0, y: 50, width: holderTemplateView.frame.size.width, height: holderTemplateView.frame.size.height - 50)
+        bottomTemplateView?.frame = CGRect(x: 0, y: self.view.frame.size.height - 400, width: holderTemplateView.frame.size.width, height: 400)
         if let view  = bottomTemplateView {
             holderTemplateView.addSubview(view)
         }
@@ -3328,6 +3331,9 @@ extension ShowResultVc: UITableViewDelegate,UITableViewDataSource {
         return UITableView.automaticDimension
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    
+    
+    
     {
         return 1
     }
@@ -3338,7 +3344,7 @@ extension ShowResultVc: UITableViewDelegate,UITableViewDataSource {
         cell.lbl.text = ""
         cell.lbl.text = showText
         
-        
+        print("i am getting showtext \(showText)")
         
         cell.lbl.textColor  = UIColor.black
         return cell

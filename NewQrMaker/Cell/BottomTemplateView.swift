@@ -153,7 +153,21 @@ extension BottomTemplateView: UICollectionViewDelegateFlowLayout {
 
         }
         
-        return CGSize(width: 100 , height: 40)
+        let fixedHeight: CGFloat = 40
+        let font = UIFont.systemFont(ofSize: 20)
+        let text = totalCategory[indexPath.row].localize()
+
+        let maxSize = CGSize(width: CGFloat.greatestFiniteMagnitude, height: fixedHeight)
+
+        let width = (text as NSString).boundingRect(
+            with: maxSize,
+            options: .usesLineFragmentOrigin,
+            attributes: [.font: font],
+            context: nil
+        ).width
+
+        
+        return CGSize(width: width , height: 40)
         
         
         // Adjust height if needed
@@ -224,6 +238,9 @@ extension BottomTemplateView: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TextCell", for: indexPath) as! TextCell
         cell.label.text = totalCategory[indexPath.row].localize()
+        
+        
+         
         
         if currentItem == indexPath.row {
             cell.label.textColor = UIColor.blue.withAlphaComponent(0.6)
