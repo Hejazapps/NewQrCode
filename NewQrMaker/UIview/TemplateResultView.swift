@@ -92,7 +92,7 @@ class TemplateResultView: UIView {
     private func configureUI() {
         containerView.layer.cornerRadius = 0
         containerView.clipsToBounds = true
-        containerView.backgroundColor = .white
+        containerView.backgroundColor = .clear
         
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true

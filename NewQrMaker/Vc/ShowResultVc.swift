@@ -2063,7 +2063,14 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
     }
     
     @IBAction func downTheViewForT(_ sender: Any) {
-        bottomSpaceTemplateView.constant = -5000
+        UIView.animate(withDuration: 0.4,
+                          delay: 0,
+                          options: [.curveEaseInOut],
+                          animations: {
+               self.bottomSpaceTemplateView.constant = -5000
+               self.view.layoutIfNeeded()
+           },
+                          completion: nil)
     }
     
     func updateTemplateimv() {

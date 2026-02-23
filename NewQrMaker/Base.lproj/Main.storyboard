@@ -5915,7 +5915,7 @@ easy access later</string>
                                             <action selector="downTheViewForT:" destination="c1Z-Tx-9Dy" eventType="touchUpInside" id="d9h-2I-bOp"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nav_btn" translatesAutoresizingMaskIntoConstraints="NO" id="UWJ-HX-Kbg">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cross 2" translatesAutoresizingMaskIntoConstraints="NO" id="UWJ-HX-Kbg">
                                         <rect key="frame" x="-13" y="-4964" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="UWJ-HX-Kbg" secondAttribute="height" multiplier="1:1" id="CIY-Vb-5mJ"/>
@@ -6070,6 +6070,7 @@ easy access later</string>
         <image name="bookmark" width="170.66667175292969" height="170.66667175292969"/>
         <image name="continue" width="328.33334350585938" height="60.666667938232422"/>
         <image name="cross" width="30" height="30"/>
+        <image name="cross 2" width="128.33332824707031" height="147.33332824707031"/>
         <image name="crown" width="32" height="32"/>
         <image name="emptyicon" width="172" height="172"/>
         <image name="gradient" width="40" height="40"/>
