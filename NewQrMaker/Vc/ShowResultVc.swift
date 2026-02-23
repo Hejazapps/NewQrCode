@@ -765,6 +765,7 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
     private var lastUpdateTime: TimeInterval = 0
     private let updateDelay: TimeInterval = 0.1
     
+    @IBOutlet weak var copyTetx: UILabel!
     @IBOutlet weak var widthForMainView: NSLayoutConstraint!
     @IBOutlet weak var heightForMainView: NSLayoutConstraint!
     @IBOutlet weak var heightForScrollView: NSLayoutConstraint!
@@ -2687,8 +2688,9 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
             //KRProgressHUD.dismiss()
         }
         
+        copyTetx.text = "Copy Text".localize()
         
-        bnTextContent.setTitle("Copy Text".localize(), for: .normal)
+      
         
         if stringValue.containsIgnoringCase(find: "geo") || stringValue.containsIgnoringCase(find: "vcalendar") {
             bnTextContent.isHidden = true
@@ -2696,28 +2698,41 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
         
         if stringValue.containsIgnoringCase(find: "WIFI") {
             
-            bnTextContent.setTitle("Connect".localize(), for: .normal)
+            copyTetx.text = "Connect".localize()
+           
         }
         if stringValue.containsIgnoringCase(find: "tel") {
-            bnTextContent.setTitle("Call".localize(), for: .normal)
+          
+            
+            copyTetx.text = "Call".localize()
         }
         if stringValue.containsIgnoringCase(find: "sms") {
-            bnTextContent.setTitle("SMS".localize(), for: .normal)
+           
+            
+            copyTetx.text = "SMS".localize()
         }
         if showText.containsIgnoringCase(find: "Url") {
-            bnTextContent.setTitle("Go to Url".localize(), for: .normal)
+           
+            
+            copyTetx.text = "Go to Url".localize()
         }
         
         if stringValue.containsIgnoringCase(find: "mailto") {
-            bnTextContent.setTitle("Email".localize(), for: .normal)
+            
+            copyTetx.text = "Email".localize()
+            
         }
         
         if stringValue.containsIgnoringCase(find: "vcard") {
-            bnTextContent.setTitle("Add to Contact".localize(), for: .normal)
+            
+            copyTetx.text = "Add to Contact".localize()
+            
         }
         
         if stringValue.containsIgnoringCase(find: "mecard") {
-            bnTextContent.setTitle("Add to Contact".localize(), for: .normal)
+            
+            copyTetx.text = "Add to Contact".localize()
+             
         }
         
         
