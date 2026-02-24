@@ -5,11 +5,11 @@
       "scale" : "1x"
     },
     {
-      "filename" : "wow.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "wow.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

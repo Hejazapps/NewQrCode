@@ -718,6 +718,7 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
     
     @IBOutlet weak var widghetLabel: UILabel!
     
+    @IBOutlet weak var backBtnp: UIImageView!
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var roundedHolderView: UIView!
     @IBOutlet weak var eyesLabel: UILabel!
@@ -776,6 +777,7 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
     
     @IBOutlet weak var tablewView: UITableView!
     
+    @IBOutlet weak var wowBtn: UIImageView!
     @IBOutlet weak var captionView: CustomView!
     @IBOutlet weak var templateOption: UIView!
     private var lastUpdateTime: TimeInterval = 0
@@ -1026,7 +1028,8 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
     
     @IBAction func gotoTemplateView(_ sender: Any) {
         
-        
+        wowBtn.alpha = 1
+        backBtnp.alpha = 0
         
         if reachability.connection == .unavailable {
             
@@ -1789,6 +1792,7 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
     }
     @IBAction func dismissTheText(_ sender: Any) {
         
+        
         UIView.animate(withDuration: 0.3) {
             self.bottomSpaceText.constant = -5000
             self.view.layoutIfNeeded()
@@ -1842,6 +1846,7 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
             }
             self.updateAll()
         }
+        wowBtn.alpha = 0
         
         
         if isfromUpdate {
@@ -2087,6 +2092,9 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
     }
     
     @IBAction func downTheViewForT(_ sender: Any) {
+        wowBtn.alpha = 0
+        backBtnp.alpha = 1
+        
         UIView.animate(withDuration: 0.4,
                           delay: 0,
                           options: [.curveEaseInOut],
