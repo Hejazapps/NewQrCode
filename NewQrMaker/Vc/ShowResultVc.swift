@@ -2074,6 +2074,10 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
         print("temp name i got \(templateFileName)")
         
         
+        if let value  = templateFileName {
+            captionView.alpha = 1.0
+            captionView.isUserInteractionEnabled = true
+        }
         tablewView.register(UINib(nibName: "TextCellStyle", bundle: nil), forCellReuseIdentifier: "TextCellStyle")
         tablewView.separatorColor = UIColor.clear
        
