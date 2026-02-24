@@ -73,7 +73,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mUf-FN-Aq4">
                                                 <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="100"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left 1" translatesAutoresizingMaskIntoConstraints="NO" id="y1Q-vs-sUV">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left 1" translatesAutoresizingMaskIntoConstraints="NO" id="y1Q-vs-sUV">
                                                         <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="100"/>
                                                     </imageView>
                                                 </subviews>
@@ -161,7 +161,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="77m-xn-nHe">
                                                 <rect key="frame" x="0.0" y="0.0" width="171.33333333333334" height="100"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right1" translatesAutoresizingMaskIntoConstraints="NO" id="Ldl-aE-vdK">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right1" translatesAutoresizingMaskIntoConstraints="NO" id="Ldl-aE-vdK">
                                                         <rect key="frame" x="0.0" y="0.0" width="171.33333333333334" height="100"/>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMT-wA-yqK">
@@ -1820,7 +1820,7 @@ easy access later</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bE8-Q0-mp4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-584" y="1512"/>
+            <point key="canvasLocation" x="-564" y="1692"/>
         </scene>
         <!--Settings-->
         <scene sceneID="yZk-UV-wzi">
@@ -5899,6 +5899,13 @@ easy access later</string>
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DpO-41-u9n">
+                                        <rect key="frame" x="0.0" y="402" width="393" height="450"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="450" id="ebz-5X-wno"/>
+                                        </constraints>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Template" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHt-XI-oH3">
                                         <rect key="frame" x="161.66666666666666" y="-4939.666666666667" width="70" height="19.33333333333303"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
@@ -5918,7 +5925,7 @@ easy access later</string>
                                             <action selector="downTheViewForT:" destination="c1Z-Tx-9Dy" eventType="touchUpInside" id="d9h-2I-bOp"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nav_btn" translatesAutoresizingMaskIntoConstraints="NO" id="UWJ-HX-Kbg">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wow" translatesAutoresizingMaskIntoConstraints="NO" id="UWJ-HX-Kbg">
                                         <rect key="frame" x="0.0" y="-4964" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="UWJ-HX-Kbg" secondAttribute="height" multiplier="1:1" id="CIY-Vb-5mJ"/>
@@ -5933,9 +5940,12 @@ easy access later</string>
                                 <constraints>
                                     <constraint firstItem="UWJ-HX-Kbg" firstAttribute="centerY" secondItem="idc-WG-4Hc" secondAttribute="centerY" id="08c-kk-mNF"/>
                                     <constraint firstAttribute="bottom" secondItem="59u-gO-lb6" secondAttribute="bottom" id="0YH-n0-h8c"/>
+                                    <constraint firstAttribute="bottom" secondItem="DpO-41-u9n" secondAttribute="bottom" id="0Zi-zL-F8z"/>
                                     <constraint firstAttribute="trailing" secondItem="59u-gO-lb6" secondAttribute="trailing" id="6bv-Ew-7Ky"/>
                                     <constraint firstItem="UWJ-HX-Kbg" firstAttribute="centerX" secondItem="idc-WG-4Hc" secondAttribute="centerX" id="6kd-us-Mnf"/>
                                     <constraint firstItem="59u-gO-lb6" firstAttribute="top" secondItem="k3J-bm-riz" secondAttribute="top" id="76e-WF-jIp"/>
+                                    <constraint firstAttribute="trailing" secondItem="DpO-41-u9n" secondAttribute="trailing" id="8lJ-yj-yhN"/>
+                                    <constraint firstItem="DpO-41-u9n" firstAttribute="leading" secondItem="k3J-bm-riz" secondAttribute="leading" id="BpY-j1-dJ8"/>
                                     <constraint firstItem="59u-gO-lb6" firstAttribute="leading" secondItem="k3J-bm-riz" secondAttribute="leading" id="U6W-r7-Xvh"/>
                                     <constraint firstItem="kHt-XI-oH3" firstAttribute="centerX" secondItem="k3J-bm-riz" secondAttribute="centerX" id="tne-LH-HAb"/>
                                 </constraints>
@@ -5997,6 +6007,7 @@ easy access later</string>
                         <outlet property="imv" destination="lna-8y-b5Q" id="xXw-Jw-X08"/>
                         <outlet property="labelText" destination="rgx-DR-g5T" id="Wm1-g2-mOl"/>
                         <outlet property="lifeTime" destination="CgM-8p-9WN" id="ODH-83-3ZX"/>
+                        <outlet property="middleView" destination="DpO-41-u9n" id="bcV-Jc-Twa"/>
                         <outlet property="preview" destination="1Dq-Ai-GUg" id="40A-Lb-R4M"/>
                         <outlet property="previewl" destination="QM8-4g-8xX" id="43l-Q0-Plg"/>
                         <outlet property="qrCodeShowView" destination="oSw-rf-bPp" id="O3O-P5-do7"/>
@@ -6106,6 +6117,7 @@ easy access later</string>
         <image name="text 1" width="200" height="95.333335876464844"/>
         <image name="topBanner" width="365" height="100"/>
         <image name="widghet" width="126.66666412353516" height="41.333332061767578"/>
+        <image name="wow" width="192.5" height="108"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -6113,28 +6125,28 @@ easy access later</string>
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.53333333333333333" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
-            <color red="0.38039215686274508" green="0.33333333333333331" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
-            <color red="0.0" green="0.78431372549019607" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.55294117647058827" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.53333333333333333" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

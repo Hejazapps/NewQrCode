@@ -223,7 +223,10 @@ extension BottomTemplateView: UICollectionViewDataSource {
             cell.totalCategory = totalCategory
             cell.parsedTemplate = parsedTemplate
             cell.updateList()
-            cell.element = 4
+            cell.element = 3
+            cell.fromShowResult = true
+            
+            
             
             cell.delegate = self
             

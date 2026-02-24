@@ -31,6 +31,9 @@ class TutotrialCell: UICollectionViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var holderView: UIView!
     var isPressed = false
+    var fromShowResult = false
+    
+    
     
     
     override func awakeFromNib() {
@@ -383,7 +386,7 @@ extension TutotrialCell: UICollectionViewDataSource {
             
             
             print("i am getting  actual value \(value1) \(idValue)")
-            if element == 4 {
+            if fromShowResult == true{
                 delegate?.sendUrl(name: value, fileName: idValue, catName: value1)
                 return
             }

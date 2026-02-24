@@ -788,6 +788,7 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
     @IBOutlet weak var heightForView: NSLayoutConstraint!
     var store: CNContactStore!
     
+    @IBOutlet weak var middleView: UIView!
     @IBOutlet weak var holderTemplateView: UIView!
     @IBOutlet weak var lifeTime: UILabel!
     @IBOutlet weak var yearlyLabel: UILabel!
@@ -2180,10 +2181,10 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
     }
     func addXibFile() {
         
-        holderTemplateView.roundCorners([.topRight,.topLeft], radius: 30)
-        bottomTemplateView?.frame = CGRect(x: 0, y: self.view.frame.size.height - 400, width: holderTemplateView.frame.size.width, height: 400)
+        middleView.roundCorners([.topRight,.topLeft], radius: 30)
+        bottomTemplateView?.frame = CGRect(x: 0, y: 20, width: holderTemplateView.frame.size.width, height: 430)
         if let view  = bottomTemplateView {
-            holderTemplateView.addSubview(view)
+            middleView.addSubview(view)
         }
         
         if !isfromQr {
@@ -3537,6 +3538,22 @@ extension ShowResultVc:UICollectionViewDelegate,UICollectionViewDataSource {
             
             fontFamily = name
             self.updateAllTextValue()
+            
+            
+            if collectionView == collectionViewForFont {
+                let name = fontArray[indexPath.row]
+                fontFamily = name
+                self.updateAllTextValue()
+                
+                // Scroll the selected item to the center of the screen
+                collectionView.scrollToItem(
+                    at: indexPath,
+                    at: .centeredHorizontally,
+                    animated: true
+                )
+            }
+            
+            
         }
         else if collectionView == collectionViewForColor {
             if indexPath.row > 0 {
