@@ -70,12 +70,6 @@
 			exceptions = (
 				C860EADF2F36FE620009B258 /* Exceptions for "NewQrMaker" folder in "NewQrMaker" target */,
 			);
-			explicitFolders = (
-				"Resources/Body Shape",
-				Resources/Fonts,
-				Resources/Logo,
-				"Resources/Position maker",
-			);
 			path = NewQrMaker;
 			sourceTree = "<group>";
 		};

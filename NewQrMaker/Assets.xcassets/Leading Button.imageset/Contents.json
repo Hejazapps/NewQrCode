@@ -5,16 +5,11 @@
       "scale" : "1x"
     },
     {
+      "filename" : "Leading Button.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Bing Search.png",
-      "idiom" : "universal",
-      "scale" : "3x"
-    },
-    {
-      "filename" : "RGB_Color.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

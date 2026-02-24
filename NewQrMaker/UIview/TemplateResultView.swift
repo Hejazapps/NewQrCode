@@ -123,6 +123,7 @@ class TemplateResultView: UIView {
         addTextButton.addTarget(self, action: #selector(addTextButtonTapped), for: .touchUpInside)
         
         containerView.addSubview(addTextButton)
+        addTextButton.alpha = 0
         
         addTextButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

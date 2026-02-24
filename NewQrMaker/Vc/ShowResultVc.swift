@@ -201,6 +201,9 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
     
     func sendUrl1(name: String, fileName: String,catName:String) {
         
+        captionView.isUserInteractionEnabled = true
+        captionView.alpha = 1.0
+        
         self.bottomSpaceText.constant = -5000
         
         let fileName = catName + fileName + ".jpg"
@@ -283,6 +286,18 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
         task.resume()
     }
     
+    
+    
+    @IBAction func goToText(_ sender: Any) {
+        
+        
+        UIView.animate(withDuration: 0.3) {
+            self.bottomSpaceText.constant = 0
+            self.bottomSpaceTemplateView.constant = -5000
+            self.view.layoutIfNeeded()
+        }
+        
+    }
     
     func doEmptyText() {
         
@@ -761,6 +776,7 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
     
     @IBOutlet weak var tablewView: UITableView!
     
+    @IBOutlet weak var captionView: CustomView!
     @IBOutlet weak var templateOption: UIView!
     private var lastUpdateTime: TimeInterval = 0
     private let updateDelay: TimeInterval = 0.1
@@ -1810,6 +1826,7 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
     @objc func methodOfReceivedNotification(notification: Notification) {
         
         
+        
         bottomTemplateView?.collectionviewForText.reloadData()
         bottomTemplateView?.collectionviewForTemplate.reloadData()
     }
@@ -1834,6 +1851,8 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
         }
         
         
+        captionView.isUserInteractionEnabled = false
+        captionView.alpha = 0.4
        
         
         wid.text = "MakeW".localize()
@@ -2205,11 +2224,7 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
         }
         
         contentView.onAddTextTapped = { [weak self] in
-            UIView.animate(withDuration: 0.3) {
-                self?.bottomSpaceText.constant = 0
-                self?.bottomSpaceTemplateView.constant = -5000
-                self?.view.layoutIfNeeded()
-            }
+           
         }
         
         contentView.onClose1Tapped = {
@@ -3482,6 +3497,8 @@ extension ShowResultVc:UICollectionViewDelegate,UICollectionViewDataSource {
         } else {
             cell.imv.image = nil
         }
+        cell.imv.layer.cornerRadius  = 10.0
+        
         return cell
     }
     
