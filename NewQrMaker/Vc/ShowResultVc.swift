@@ -1,4 +1,3 @@
-
 //  ShowResultVc.swift
 //  QrCode&BarCodeMizan
 //
@@ -32,7 +31,25 @@ protocol dismissImagePicker {
     func  dimissAllClass()
 }
 
-class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, sendImage, sendUpdatedArray, EKEventEditViewDelegate, MFMailComposeViewControllerDelegate, showAlertBv, UIColorPickerViewControllerDelegate, sendimageValue1, sendStyle {
+class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, sendImage, sendUpdatedArray, EKEventEditViewDelegate, MFMailComposeViewControllerDelegate, showAlertBv, UIColorPickerViewControllerDelegate, sendimageValue1, sendStyle, DataPassDelegate {
+    func didReceiveData1(_ logo: UIImage?) {
+        print("[baki] 📥 didReceiveData called")
+        
+        if let logo = logo {
+            print("[baki] ✅ Logo received successfully")
+            print("[baki] 🖼 Image size: \(logo.size)")
+            print("[baki] 📦 Rendering mode: \(logo.renderingMode.rawValue)")
+            print("[baki] 🧠 Memory address: \(Unmanaged.passUnretained(logo).toOpaque())")
+        } else {
+            print("[baki] ❌ Logo is nil")
+        }
+        
+        logo1 = logo
+        print("[baki] 🔄 Assigned logo to logo1")
+        
+        updateAll()
+        print("[baki] 🚀 updateAll() called")
+    }
     
     
   
@@ -1247,6 +1264,7 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
         if name.containsIgnoringCase(find: "grid3x3") {
             doc.design.shape.onPixels = QRCode.PixelShape.Grid3x3()
         }
+        
         if name.containsIgnoringCase(find: "grid4x4") {
             doc.design.shape.onPixels = QRCode.PixelShape.Grid4x4()
         }
@@ -2338,32 +2356,39 @@ class ShowResultVc: UIViewController, MFMessageComposeViewControllerDelegate, se
     
     @IBAction func gotoEditContent(_ sender: Any) {
         
-        
-        if let v =  eventF {
-            let eventController = EKEventEditViewController()
-            eventController.event = v
-            eventController.editViewDelegate = self
-            eventController.modalPresentationStyle = .fullScreen
-            self.present(eventController, animated: true)
-            return
-        }
-        
-        
-        
-        
-        
-        if !isfromQr {
-            createDataModelArray.removeAll()
-            createDataModelArray.append(ResultDataModel(title: "Enter value", description: stringValue))
-        }
-        
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "EditVc") as! EditVc
-        vc.modalPresentationStyle = .fullScreen
-        vc.createDataModelArray = createDataModelArray
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LogoVc") as! LogoVc
+        vc.modalPresentationStyle = .overCurrentContext
         vc.delegate = self
-        vc.currenttypeOfQrBAR = currenttypeOfQrBAR
-        vc.isFromQr = isfromQr
-        transitionVc(vc: vc, duration: 0.4, type: .fromRight)
+        
+        
+        self.present(vc, animated: true, completion: nil)
+        
+        
+//        if let v =  eventF {
+//            let eventController = EKEventEditViewController()
+//            eventController.event = v
+//            eventController.editViewDelegate = self
+//            eventController.modalPresentationStyle = .fullScreen
+//            self.present(eventController, animated: true)
+//            return
+//        }
+//        
+//        
+//        
+//        
+//        
+//        if !isfromQr {
+//            createDataModelArray.removeAll()
+//            createDataModelArray.append(ResultDataModel(title: "Enter value", description: stringValue))
+//        }
+//        
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "EditVc") as! EditVc
+//        vc.modalPresentationStyle = .fullScreen
+//        vc.createDataModelArray = createDataModelArray
+//        vc.delegate = self
+//        vc.currenttypeOfQrBAR = currenttypeOfQrBAR
+//        vc.isFromQr = isfromQr
+//        transitionVc(vc: vc, duration: 0.4, type: .fromRight)
         
         
     }
@@ -3684,3 +3709,4 @@ extension UIImage {
         return UIImage.animatedImage(with: images, duration: duration)
     }
 }
+

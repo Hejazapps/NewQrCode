@@ -62,8 +62,8 @@
             filePath = "NewQrMaker/Vc/ShowResultVc.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "353"
-            endingLineNumber = "353"
+            startingLineNumber = "377"
+            endingLineNumber = "377"
             landmarkName = "setAllValue(obj:)"
             landmarkType = "7">
          </BreakpointContent>
